@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import {
     Route,
     NavLink,
@@ -20,7 +20,7 @@ class Nav extends Component {
                         <NavLink to="/contact">Contact me</NavLink>
                     </Navbar>
                     <div className="content">
-                        <Route exact path="/" component={Home} />
+                        <Route exact path="/" component={Home}/>
                         <Route path="/projects" component={Projects}/>
                     </div>
                 </div>
