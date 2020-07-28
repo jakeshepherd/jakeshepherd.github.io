@@ -1,12 +1,13 @@
 span.spacer:after {
     display:inline-block;
-    width:80%;
+    width:100%;
     content:".";
     font-size:0;
     color:transparent;
     height:2px;
-    background: grey;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#000), to(#fff));
     vertical-align:middle;
     position:relative;
-    top:-1px;
+    top:15px;
+    bottom: 15px;
 }

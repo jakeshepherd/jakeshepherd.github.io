@@ -19,6 +19,7 @@ class Projects extends Component {
                     name={"Personal Dashboard"}
                     image={PersonalDashboard}
                 />
+                <span className="spacer" />
                 <LargeProject
                     name={"Tamago"}
                     image={Tamago}
@@ -26,6 +27,7 @@ class Projects extends Component {
                     " Another feature of Tamago is providing a recipe to use based on the food soonest to expiry in the database.\n" +
                     "This was created using Java in the Android Studio IDE"}
                 />
+                <span className="spacer" />
                 <LargeProject
                     name={"Route1"}
                     image={Route1}
@@ -33,6 +35,7 @@ class Projects extends Component {
                     " It's primary purpose is to analyse different paths you take from A to B over several different trips, and then produce your most efficient way to get from said A to B\n" +
                     "This app was created using Java in the Android Studio IDE"}
                 />
+                <span className="spacer" />
                 <LargeProject
                     name={"Money Manager"}
                     image={MoneyManager}
@@ -40,6 +43,7 @@ class Projects extends Component {
                     " You can add single time or recurring bills, as well as emailing whoever you may be splitting the bills with\n" +
                     "Again, the app was created using Java in the Android Studio IDE and was completed over 3 months of Summer"}
                 />
+                <span className="spacer" />
                 <h3>More Projects...</h3>
                 <SmallProject
                     name={"Chat System"}
