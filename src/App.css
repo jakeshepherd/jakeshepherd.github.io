@@ -32,3 +32,21 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 20px;
+  color: white;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
+  padding: 5px;
+}
+
+.NavBar {
+  background-color: black;
+  padding: 1em;
+}
