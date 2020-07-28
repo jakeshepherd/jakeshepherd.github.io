@@ -1,0 +1,12 @@
+span.spacer:after {
+    display:inline-block;
+    width:80%;
+    content:".";
+    font-size:0;
+    color:transparent;
+    height:2px;
+    background: grey;
+    vertical-align:middle;
+    position:relative;
+    top:-1px;
+}
