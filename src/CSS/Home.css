@@ -1,0 +1,13 @@
+span.spacer:after {
+    display:inline-block;
+    width:100%;
+    content:".";
+    font-size:0;
+    color:transparent;
+    height:2px;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#000), to(#fff));
+    vertical-align:middle;
+    position:relative;
+    top:15px;
+    bottom: 15px;
+}

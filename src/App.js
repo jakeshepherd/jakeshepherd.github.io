@@ -1,14 +1,11 @@
 import React from 'react';
-import './App.css';
+import './CSS/App.css';
+import Nav from "./Pages/Nav";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Jake Shepherd</h1>
-      </header>
-    </div>
-  );
+    return (
+        <Nav />
+    );
 }
 
 export default App;
