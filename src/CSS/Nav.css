@@ -28,12 +28,6 @@ a {
     font-size: 25px;
 }
 
-#brand::after {
-    content: "";
-    background-color: dodgerblue;
-    margin-right: 800px;
-}
-
 #brand::before {
     content: "";
     margin-left: 10px;
