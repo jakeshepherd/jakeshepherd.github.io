@@ -1,0 +1,40 @@
+.NavBar {
+    background-image: linear-gradient(to right, mediumpurple, dodgerblue);
+    padding: 1em;
+}
+
+a {
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 20px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.NavBar h1 {
+    color: red;
+}
+
+.NavBar h2 {
+    margin-bottom: -30px;
+}
+
+.nav-link {
+    color: white;
+}
+
+#brand {
+    color: white;
+    font-size: 25px;
+}
+
+#brand::after {
+    content: "";
+    background-color: dodgerblue;
+    margin-right: 800px;
+}
+
+#brand::before {
+    content: "";
+    margin-left: 10px;
+}

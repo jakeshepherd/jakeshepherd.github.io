@@ -1,5 +1,7 @@
 span.spacer:after {
     display:inline-block;
+    margin-bottom: 50px;
+    margin-top: 30px;
     width:100%;
     content:".";
     font-size:0;
@@ -10,4 +12,40 @@ span.spacer:after {
     position:relative;
     top:15px;
     bottom: 15px;
+}
+
+.contact-me {
+    border-radius: 2em;
+    padding: 10px;
+    background-color: white;
+    color: dodgerblue;
+    border: dodgerblue 2px solid;
+}
+
+.portrait {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 50%;
+    border: 1px solid white;
+
+    height: 200px;
+    width: 200px;
+
+    overflow: hidden;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.me {
+    margin-top: 35px;
+    height: 120%;
+    width: 100%;
+
+    max-width:150%;
+    max-height:150%;
 }
