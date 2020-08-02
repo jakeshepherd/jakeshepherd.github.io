@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/index.html/static/css/main.6ab99b7b.chunk.css",
-    "main.js": "/index.html/static/js/main.9bad5885.chunk.js",
-    "main.js.map": "/index.html/static/js/main.9bad5885.chunk.js.map",
-    "runtime-main.js": "/index.html/static/js/runtime-main.565ad4c4.js",
-    "runtime-main.js.map": "/index.html/static/js/runtime-main.565ad4c4.js.map",
-    "static/js/2.3676399a.chunk.js": "/index.html/static/js/2.3676399a.chunk.js",
-    "static/js/2.3676399a.chunk.js.map": "/index.html/static/js/2.3676399a.chunk.js.map",
-    "index.html": "/index.html/index.html",
-    "precache-manifest.9d249dcf6cda3548c8018f27372ba232.js": "/index.html/precache-manifest.9d249dcf6cda3548c8018f27372ba232.js",
-    "service-worker.js": "/index.html/service-worker.js",
-    "static/css/main.6ab99b7b.chunk.css.map": "/index.html/static/css/main.6ab99b7b.chunk.css.map",
-    "static/js/2.3676399a.chunk.js.LICENSE.txt": "/index.html/static/js/2.3676399a.chunk.js.LICENSE.txt",
-    "static/media/MoneyManager.jpg": "/index.html/static/media/MoneyManager.42a9b88d.jpg",
-    "static/media/PersonalDashboard.png": "/index.html/static/media/PersonalDashboard.d838490d.png",
-    "static/media/Route1.jpg": "/index.html/static/media/Route1.9b2d7c98.jpg",
-    "static/media/Tamago.jpg": "/index.html/static/media/Tamago.93a1390f.jpg"
+    "main.css": "/static/css/main.6ab99b7b.chunk.css",
+    "main.js": "/static/js/main.9e69b3f9.chunk.js",
+    "main.js.map": "/static/js/main.9e69b3f9.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f5105409.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f5105409.js.map",
+    "static/js/2.3676399a.chunk.js": "/static/js/2.3676399a.chunk.js",
+    "static/js/2.3676399a.chunk.js.map": "/static/js/2.3676399a.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.8b368e7445b242087c0d3b596b97c081.js": "/precache-manifest.8b368e7445b242087c0d3b596b97c081.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.6ab99b7b.chunk.css.map": "/static/css/main.6ab99b7b.chunk.css.map",
+    "static/js/2.3676399a.chunk.js.LICENSE.txt": "/static/js/2.3676399a.chunk.js.LICENSE.txt",
+    "static/media/MoneyManager.jpg": "/static/media/MoneyManager.42a9b88d.jpg",
+    "static/media/PersonalDashboard.png": "/static/media/PersonalDashboard.d838490d.png",
+    "static/media/Route1.jpg": "/static/media/Route1.9b2d7c98.jpg",
+    "static/media/Tamago.jpg": "/static/media/Tamago.93a1390f.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.565ad4c4.js",
+    "static/js/runtime-main.f5105409.js",
     "static/js/2.3676399a.chunk.js",
     "static/css/main.6ab99b7b.chunk.css",
-    "static/js/main.9bad5885.chunk.js"
+    "static/js/main.9e69b3f9.chunk.js"
   ]
 }
