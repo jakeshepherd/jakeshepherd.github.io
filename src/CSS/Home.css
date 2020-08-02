@@ -1,5 +1,7 @@
 span.spacer:after {
     display:inline-block;
+    margin-bottom: 50px;
+    margin-top: 30px;
     width:100%;
     content:".";
     font-size:0;
@@ -10,6 +12,14 @@ span.spacer:after {
     position:relative;
     top:15px;
     bottom: 15px;
+}
+
+.contact-me {
+    border-radius: 2em;
+    padding: 10px;
+    background-color: white;
+    color: dodgerblue;
+    border: dodgerblue 2px solid;
 }
 
 .portrait {

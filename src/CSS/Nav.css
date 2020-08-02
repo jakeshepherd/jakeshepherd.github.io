@@ -31,5 +31,10 @@ a {
 #brand::after {
     content: "";
     background-color: dodgerblue;
-    margin-right: 890px;
+    margin-right: 800px;
+}
+
+#brand::before {
+    content: "";
+    margin-left: 10px;
 }
