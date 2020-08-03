@@ -22,6 +22,11 @@ span.spacer:after {
     border: dodgerblue 2px solid;
 }
 
+.contact-me:hover {
+    color: white;
+    background-color: dodgerblue;
+}
+
 .portrait {
     margin-top: 20px;
     margin-bottom: 20px;
