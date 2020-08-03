@@ -8,6 +8,7 @@ import JakeBarry from "../Images/Jake&Barry.jpg";
 import Communication from "../Images/icons8-communication-skill-64.png";
 import Coding from "../Images/icons8-laptop-64.png";
 import CleanCode from "../Images/icons8-code-64.png";
+import ContactButton from "../Components/ContactButton";
 
 class Home extends Component {
     render() {
@@ -19,9 +20,7 @@ class Home extends Component {
                 <h1>Hi there, I'm Jake</h1>
                 <p>I work as a front end and back end developer. I have a passion for tidy, well architected and Test
                     Driven software.</p>
-                <a href={"/contact"}>
-                    <button className={"contact-me"}><strong>Contact me</strong></button>
-                </a>
+                <ContactButton />
                 <span className="spacer"/>
                 <h1 className={"home-headings"}>Skills</h1>
                 <Skills
@@ -34,9 +33,7 @@ class Home extends Component {
                 <span className="spacer"/>
                 <ProjectImage />
                 <p id={"interested"}>Interested?
-                    <a href={"/contact"}>
-                        <button className={"contact-me"}><strong>Contact me</strong></button>
-                    </a>
+                    <ContactButton />
                 </p>
             </div>
         );

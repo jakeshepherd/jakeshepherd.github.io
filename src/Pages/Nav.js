@@ -10,6 +10,7 @@ import Home from "./Home";
 
 import "../CSS/Nav.css";
 import 'bootstrap/dist/css/bootstrap.css';
+import Contact from "./Contact";
 
 class Nav extends Component {
     render() {
@@ -29,6 +30,7 @@ class Nav extends Component {
                     <div className="content">
                         <Route exact path="/" component={Home}/>
                         <Route path="/projects" component={Projects}/>
+                        <Route path={"/contact"} component={Contact}/>
                     </div>
                 </div>
             </BrowserRouter>

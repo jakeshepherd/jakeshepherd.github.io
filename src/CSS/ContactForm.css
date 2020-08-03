@@ -1,0 +1,12 @@
+.contact-form {
+    -webkit-box-shadow: 0px 0px 53px -18px rgba(0,0,0,0.28);
+    -moz-box-shadow: 0px 0px 53px -18px rgba(0,0,0,0.28);
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+
+    padding: 1em;
+    display:inline-grid;
+    align-items:center;
+    justify-content:center;
+    width: fit-content;
+    border-radius: 5px;
+}
