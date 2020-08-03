@@ -19,7 +19,9 @@ class Home extends Component {
                 <h1>Hi there, I'm Jake</h1>
                 <p>I work as a front end and back end developer. I have a passion for tidy, well architected and Test
                     Driven software.</p>
-                <button className={"contact-me"}><strong>Contact me</strong></button>
+                <a href={"/contact"}>
+                    <button className={"contact-me"}><strong>Contact me</strong></button>
+                </a>
                 <span className="spacer"/>
                 <h1 className={"home-headings"}>Skills</h1>
                 <Skills
@@ -31,7 +33,11 @@ class Home extends Component {
                 />
                 <span className="spacer"/>
                 <ProjectImage />
-                <p id={"interested"}>Interested? <button className={"contact-me"}><strong>Contact me</strong></button></p>
+                <p id={"interested"}>Interested?
+                    <a href={"/contact"}>
+                        <button className={"contact-me"}><strong>Contact me</strong></button>
+                    </a>
+                </p>
             </div>
         );
     }
