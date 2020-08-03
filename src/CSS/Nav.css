@@ -23,16 +23,16 @@ a {
     color: white;
 }
 
-#brand {
+.nav-link:hover {
+    color: hsla(0,0%,100%,.75);
+}
+
+.brand {
     color: white;
     font-size: 25px;
 }
 
-#brand:hover {
+.brand:hover {
+    color: hsla(0,0%,100%,.75);
     text-decoration: none;
-}
-
-#brand::before {
-    content: "";
-    margin-left: 10px;
 }

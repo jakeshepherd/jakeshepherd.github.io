@@ -9,10 +9,6 @@ import Communication from "../Images/icons8-communication-skill-64.png";
 import Coding from "../Images/icons8-laptop-64.png";
 import CleanCode from "../Images/icons8-code-64.png";
 
-import Route1 from "../Images/Route1.jpg";
-import Tamago from "../Images/Tamago.jpg";
-import MoneyManager from "../Images/MoneyManager.jpg";
-
 class Home extends Component {
     render() {
         return (
@@ -23,7 +19,9 @@ class Home extends Component {
                 <h1>Hi there, I'm Jake</h1>
                 <p>I work as a front end and back end developer. I have a passion for tidy, well architected and Test
                     Driven software.</p>
-                <button className={"contact-me"}><strong>Contact me</strong></button>
+                <a href={"/contact"}>
+                    <button className={"contact-me"}><strong>Contact me</strong></button>
+                </a>
                 <span className="spacer"/>
                 <h1 className={"home-headings"}>Skills</h1>
                 <Skills
@@ -34,12 +32,12 @@ class Home extends Component {
                     ]}
                 />
                 <span className="spacer"/>
-                <ProjectImage images={[
-                    Route1,
-                    Tamago,
-                    MoneyManager
-                ]}/>
-
+                <ProjectImage />
+                <p id={"interested"}>Interested?
+                    <a href={"/contact"}>
+                        <button className={"contact-me"}><strong>Contact me</strong></button>
+                    </a>
+                </p>
             </div>
         );
     }
