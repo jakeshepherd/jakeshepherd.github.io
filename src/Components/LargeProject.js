@@ -4,9 +4,9 @@ class LargeProject extends Component {
     render() {
         return (
             <div>
-                <h2>{this.props.name}</h2>
+                <h3>{this.props.name}</h3>
                 <p>{this.props.details}</p>
-                <img src={this.props.image} alt={"Sorry, this could not be found."}/>
+                <img className={"large-image"} src={this.props.image} alt={"Sorry, this could not be found."}/>
             </div>
         );
     }
