@@ -14,31 +14,31 @@ class ProjectImage extends Component {
                 <div className={"row"}>
                     <a href={"projects"}>
                         <div className={"container"}>
-                            <img className={"project-image"} src={Route1} alt={"This image isn't available right now"}/>
+                            <img src={Route1} alt={"This image isn't available right now"}/>
                             <div className="overlay">
                                 <p className="image-header"><strong>Route 1</strong></p>
-                                <p className="image-text">This is some test text</p>
+                                <p className="image-text">An android application that determines best routes based on previous journeys a user has gone on </p>
                             </div>
                         </div>
                     </a>
 
                     <a href={"projects"}>
                         <div className={"container"}>
-                            <img className={"project-image"} src={Tamago} alt={"This image isn't available right now"}/>
+                            <img src={Tamago} alt={"This image isn't available right now"}/>
                             <div className="overlay">
                                 <p className="image-header"><strong>Tamago</strong></p>
-                                <p className="image-text">This is some test text</p>
+                                <p className="image-text">An android application that will advice recipes based on the food you have left in your household.</p>
                             </div>
                         </div>
                     </a>
 
                     <a href={"projects"}>
                         <div className={"container"}>
-                            <img className={"project-image"} src={PersonalDashboard}
+                            <img src={PersonalDashboard}
                                  alt={"This image isn't available right now"}/>
                             <div className="overlay">
                                 <p className="image-header"><strong>Personal Dashboard</strong></p>
-                                <p className="image-text">This is some test text</p>
+                                <p className="image-text">A website created in Laravel to act as a users first page they hit when they open up their internet browser.</p>
                             </div>
                         </div>
                     </a>
