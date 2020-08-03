@@ -6,8 +6,8 @@ import Footer from "./Pages/Footer";
 function App() {
     return (
         <div>
-            <Nav />
-            <Footer />
+            <Nav/>
+            <Footer/>
         </div>
     );
 }

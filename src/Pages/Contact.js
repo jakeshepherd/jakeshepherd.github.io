@@ -7,7 +7,8 @@ class Contact extends Component {
         return (
             <div>
                 <h2>Contact me</h2>
-                <form className={"contact-form"}>
+                <form className={"contact-form"} action={"mailto:jakeshepherd98@gmail.com"} method={"POST"}
+                name={"EmailForm"} encType={"multipart/form-data"}>
                     <label>Your name:</label>
                     <input type={"text"} name={"name"} />
                     <label>Subject</label>
