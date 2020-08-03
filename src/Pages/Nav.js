@@ -7,10 +7,10 @@ import {
 import Navbar from "react-bootstrap/Navbar";
 import Projects from "./Projects";
 import Home from "./Home";
+import Contact from "./Contact";
 
 import "../CSS/Nav.css";
 import 'bootstrap/dist/css/bootstrap.css';
-import Contact from "./Contact";
 
 class Nav extends Component {
     render() {
