@@ -20,11 +20,13 @@ span.spacer:after {
     background-color: white;
     color: dodgerblue;
     border: dodgerblue 2px solid;
+    transition: background-color 0.5s ease;
 }
 
 .contact-me:hover {
     color: white;
     background-color: dodgerblue;
+    transition: background-color 0.5s ease;
 }
 
 .portrait {
