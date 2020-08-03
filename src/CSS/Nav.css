@@ -28,6 +28,10 @@ a {
     font-size: 25px;
 }
 
+#brand:hover {
+    text-decoration: none;
+}
+
 #brand::before {
     content: "";
     margin-left: 10px;
