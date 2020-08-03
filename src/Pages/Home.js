@@ -9,9 +9,7 @@ import Communication from "../Images/icons8-communication-skill-64.png";
 import Coding from "../Images/icons8-laptop-64.png";
 import CleanCode from "../Images/icons8-code-64.png";
 
-import Route1 from "../Images/Route1.jpg";
-import Tamago from "../Images/Tamago.jpg";
-import MoneyManager from "../Images/MoneyManager.jpg";
+
 
 class Home extends Component {
     render() {
@@ -34,11 +32,7 @@ class Home extends Component {
                     ]}
                 />
                 <span className="spacer"/>
-                <ProjectImage images={[
-                    Route1,
-                    Tamago,
-                    MoneyManager
-                ]}/>
+                <ProjectImage />
 
             </div>
         );
