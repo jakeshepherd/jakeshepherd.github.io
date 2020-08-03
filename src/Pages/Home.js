@@ -18,7 +18,12 @@ class Home extends Component {
                 <button className={"contact-me"}><strong>Contact me</strong></button>
                 <span className="spacer"/>
                 <h1 className={"home-headings"}>Skills</h1>
-                <Skills skills={["Code", "Ing"]}/>
+                <Skills
+                    skills={[
+                        {name: "Test Driven Development", description: "this is a test description"},
+                        {name: "Full Stack Development", description: "here is another one"}
+                    ]}
+                />
             </div>
         );
     }
