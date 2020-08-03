@@ -31,7 +31,7 @@ class Home extends Component {
                 />
                 <span className="spacer"/>
                 <ProjectImage />
-                <p>Interested? <button className={"contact-me"}><strong>Contact me</strong></button></p>
+                <p id={"interested"}>Interested? <button className={"contact-me"}><strong>Contact me</strong></button></p>
             </div>
         );
     }
