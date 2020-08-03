@@ -9,8 +9,6 @@ import Communication from "../Images/icons8-communication-skill-64.png";
 import Coding from "../Images/icons8-laptop-64.png";
 import CleanCode from "../Images/icons8-code-64.png";
 
-
-
 class Home extends Component {
     render() {
         return (
