@@ -30,15 +30,19 @@ body {
 }
 
 @media screen and (max-width: 540px) {
-
-.bm-burger-button {
-    visibility: hidden;
+    .bm-burger-button {
+        display: none;
+        margin-top: -18px;
+        position: fixed;
+        width: 36px;
+        height: 30px;
+        right: 36px;
+        top: 36px;
+    }
 }
 
-}
 .bm-burger-button {
-    display: block;
-    margin-top: -14px;
+    margin-top: -18px;
     position: fixed;
     width: 36px;
     height: 30px;
