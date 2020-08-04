@@ -32,9 +32,18 @@ class Home extends Component {
                 />
                 <span className="spacer"/>
                 <ProjectImage />
-                <p id={"interested"}>Interested?
-                    <ContactButton />
+                <p className={"interested"}>Interested?
                 </p>
+
+                <ContactButton />
+
+                <br />
+                <br />
+                <a target="_blank" href="https://icons8.com/icons/set/communication-skill">Communication Skill icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+                <br />
+                <a target="_blank" href="https://icons8.com/icons/set/laptop">Laptop icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+                <br />
+                <a target="_blank" href="https://icons8.com/icons/set/code">Code icon</a>icon by <a target="_blank" href="https://icons8.com">Icons8</a>
             </div>
         );
     }
