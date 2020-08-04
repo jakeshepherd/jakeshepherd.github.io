@@ -15,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 class Nav extends Component {
     render() {
         return (
-            <BrowserRouter>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className="App">
                     <Navbar className={"NavBar"} bg="dark" expand="lg">
                         <NavLink className={"brand"} to="/">Jake Shepherd</NavLink>
