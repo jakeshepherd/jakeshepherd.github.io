@@ -1,4 +1,17 @@
-#skill-box {
+@media only screen and (min-width: 541px) {
+    .skill-box{
+        display:none;
+        background-color: red;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .skill-box{
+        justify-content: center;
+    }
+}
+
+.skill-box {
     display: inline-grid;
     grid-column-gap: 100px;
     margin: auto;
