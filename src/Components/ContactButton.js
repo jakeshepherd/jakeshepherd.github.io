@@ -17,13 +17,13 @@ class ContactButton extends Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <button className={"contact-me"} onClick={this.onContactClick}><strong>Contact me</strong></button>
                 {this.state.showComponent ?
                     <Contact /> :
                     null
                 }
-            </div>
+            </React.Fragment>
         );
     }
 }
