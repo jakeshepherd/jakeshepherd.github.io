@@ -6,6 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 import "../CSS/Nav.css";
 import 'bootstrap/dist/css/bootstrap.css';
+import Burger from "../Components/Burger";
 
 class Nav extends Component {
     render() {
@@ -13,12 +14,7 @@ class Nav extends Component {
                 <div className="App">
                     <Navbar className={"NavBar"} bg="dark" expand="lg">
                         <NavLink className={"brand"} to="/">Jake Shepherd</NavLink>
-                        <Navbar.Collapse>
-                            <NavLink className={"nav-link"} to="/">Home</NavLink>
-                            <NavLink className={"nav-link"} to="/projects">Projects</NavLink>
-                            <NavLink className={"nav-link"} to="/cv">CV</NavLink>
-                            <NavLink className={"nav-link"} to="/contact">Contact</NavLink>
-                        </Navbar.Collapse>
+                        <Burger/>
                     </Navbar>
                 </div>
         );

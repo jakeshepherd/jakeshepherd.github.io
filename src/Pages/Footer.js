@@ -1,20 +1,21 @@
 import React, {Component} from "react";
 
 import "../CSS/Footer.css";
+import {Link} from "react-router-dom";
 
 class Footer extends Component {
     render() {
         return (
             <footer className={"footer"}>
-                <a href={"/"}>
+                <Link to={"/"}>
                     <p><strong>About me</strong></p>
-                </a>
-                <a href={"/contact"}>
+                </Link>
+                <Link to={"/contact"}>
                     <p><strong>Contact me</strong></p>
-                </a>
-                <a href={"/projects"}>
+                </Link>
+                <Link to={"/projects"}>
                     <p><strong>Projects</strong></p>
-                </a>
+                </Link>
             </footer>
         )
     }
