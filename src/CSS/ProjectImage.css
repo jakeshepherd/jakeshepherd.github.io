@@ -1,14 +1,29 @@
+@media only screen and (min-width: 541px) {
+    .row img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 1em;
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .row img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        border-radius: 1em;
+    }
+}
+
 .row {
     display:flex;
     align-items:center;
     justify-content:center;
     overflow: hidden;
     max-width: 100%;
-}
-
-.row img {
-    border-radius: 1em;
-    width: 400px;
 }
 
 .image-header {
