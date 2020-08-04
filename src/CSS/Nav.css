@@ -36,3 +36,15 @@ a {
     color: hsla(0,0%,100%,.75);
     text-decoration: none;
 }
+
+@media screen and (max-width: 600px) {
+    .nav-link {
+        visibility: hidden;
+        clear: both;
+        float: left;
+        margin: 10px auto 5px 20px;
+        width: 28%;
+        display: none;
+    }
+}
+
