@@ -64,3 +64,7 @@ span.spacer:after {
 .interested {
     margin-top: 20px;
 }
+
+.center-page a {
+    color: dodgerblue;
+}
