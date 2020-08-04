@@ -8,13 +8,11 @@ class Skills extends Component {
             <div>
                 {this.props.skills.map((skill, index) => {
                     return (
-                        <div key={index}>
-                            <div className={"skill-box"}>
+                            <div className={"skill-box"} key={index}>
                                 <img id={"skill-icon"} src={skill.image} alt={"it no workey lols"}/>
                                 <h3>{skill.name}</h3>
                                 <p>{skill.description}</p>
                             </div>
-                        </div>
                     )
                 })}
             </div>

@@ -1,7 +1,11 @@
 @media only screen and (min-width: 541px) {
     .skill-box{
-        display:none;
-        background-color: red;
+        display: inline-grid;
+        grid-column-gap: 100px;
+        margin: auto;
+        width: 30%;
+
+        padding: 1em;
     }
 }
 
@@ -9,15 +13,6 @@
     .skill-box{
         justify-content: center;
     }
-}
-
-.skill-box {
-    display: inline-grid;
-    grid-column-gap: 100px;
-    margin: auto;
-    width: 30%;
-
-    padding: 1em;
 }
 
 #skill-icon {
