@@ -13,7 +13,7 @@ import ContactButton from "../Components/ContactButton";
 class Home extends Component {
     render() {
         return (
-            <div>
+            <div className={"center-page"}>
                 <div className={"portrait"}>
                     <img className={"me"} src={JakeBarry} alt={"Sorry, this could not be found."}/>
                 </div>

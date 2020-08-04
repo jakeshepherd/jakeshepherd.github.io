@@ -5,7 +5,7 @@ import "../CSS/ContactForm.css";
 class Contact extends Component {
     render() {
         return (
-            <div>
+            <div className={"center-page"}>
                 <h2>Contact me</h2>
                 <form className={"contact-form"} action={"mailto:jakeshepherd98@gmail.com"} method={"POST"}
                 name={"EmailForm"} encType={"multipart/form-data"}>

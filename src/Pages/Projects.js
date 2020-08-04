@@ -13,7 +13,7 @@ import SmallProject from "../Components/SmallProject";
 class Projects extends Component {
     render() {
         return (
-            <div>
+            <div className={"center-page"}>
                 <h1>Projects</h1>
                 <LargeProject
                     name={"Personal Dashboard"}
