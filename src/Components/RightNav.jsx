@@ -6,11 +6,11 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-  margin-top: 20px;
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: #0D2538;
+    background-image: linear-gradient(to bottom, mediumpurple, dodgerblue);
+    border-radius: 10px;
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;
