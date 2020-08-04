@@ -10,7 +10,6 @@ const Ul = styled.ul`
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     background-image: linear-gradient(to bottom, mediumpurple, dodgerblue);
-    border-radius: 10px;
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;
@@ -20,6 +19,11 @@ const Ul = styled.ul`
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     z-index: 1;
+  }
+  .nav-link {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
   }
 `;
 
