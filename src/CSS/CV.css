@@ -2,6 +2,19 @@ h1 {
     text-align: center;
 }
 
+.CV-header {
+    margin: 30px;
+}
+
+.date {
+    margin-top: -70px;
+    opacity: .8;
+    font-size: .8rem;
+    font-weight: 900;
+    color: #6c757d;
+    float: right;
+}
+
 .work-experience {
     margin: auto;
     padding: 10px;
@@ -19,21 +32,22 @@ h1 {
 }
 
 .company {
-    padding-left: 5px;
-    padding-right: 5px;
+    font-size: 15px;
+    border-radius: 2em;
+    padding: 2px 8px;
+    margin-top: 10px;
     width: fit-content;
     background-color: dodgerblue;
     color: white;
-    border-radius: 10px;
 }
 
 .establishment {
-    padding-left: 5px;
-    padding-right: 5px;
+    font-size: 15px;
+    padding: 2px 8px;
     width: fit-content;
     background-color: #20c997;
     color: white;
-    border-radius: 10px;
+    border-radius: 2em;
 }
 
 .hobbie-descriptions {
@@ -42,5 +56,42 @@ h1 {
 }
 
 .hobbies {
+    color: #6c757d!important;
     text-align: center;
+}
+
+.description {
+    color: #6c757d!important;
+}
+
+.contact-info-box {
+    -webkit-box-shadow: 0px 0px 53px -18px rgba(0,0,0,0.28);
+    -moz-box-shadow: 0px 0px 53px -18px rgba(0,0,0,0.28);
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    height: 300px;
+    width: 20%;
+
+    padding-top: 30px;
+}
+
+.contact-info {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.contact-info-header {
+    margin-left: 30px;
+}
+
+.contact-info-icons {
+    margin-left: 20px;
+    width: 14%;
+}
+
+.icon-ref {
+    margin-left: 160px;
 }

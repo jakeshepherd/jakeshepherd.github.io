@@ -4,12 +4,12 @@ import "../CSS/CV.css";
 import WorkExperience from "../Components/WorkExperience";
 import Education from "../Components/Education";
 import Hobbies from "../Components/Hobbies";
+import ContactInfo from "../Components/ContactInfo";
 
 class CV extends Component {
     render() {
         return (
             <div>
-                <h1>Work Experience</h1>
                 <WorkExperience
                     works={[
                         {
@@ -30,7 +30,6 @@ class CV extends Component {
                         }
                     ]}
                 />
-                <h1>Education</h1>
                 <Education
                     educations={[
                         {
@@ -53,7 +52,13 @@ class CV extends Component {
                         }
                     ]}
                 />
+                <ContactInfo />
                 <Hobbies />
+
+                <a className={"icon-ref"} target="_blank" href="https://icons8.com/icons/set/planner">Planner icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+                <a className={"icon-ref"} target="_blank" href="https://icons8.com/icons/set/person-male">Person icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+                <a className={"icon-ref"} target="_blank" href="https://icons8.com/icons/set/phone">Phone icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+                <a className={"icon-ref"} target="_blank" href="https://icons8.com/icons/set/email">Email icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
             </div>
         );
     }

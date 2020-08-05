@@ -4,7 +4,7 @@ class Hobbies extends Component {
     render() {
         return (
             <div className={"hobbie-descriptions"}>
-                <h1>Hobbies</h1>
+                <h1 className={"CV-header"}>Hobbies</h1>
                 <p className={"hobbies"}>Starting from a young age, I have played tennis for most of my life.
                     Tennis is a sport that has shaped a large amount of who I am and something that has made me want to
                     give back
