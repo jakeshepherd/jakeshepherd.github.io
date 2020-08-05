@@ -1,0 +1,17 @@
+.work-experience {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    border-bottom: #ddd 1px solid;
+}
+
+.company {
+    margin: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: fit-content;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 10px;
+}
