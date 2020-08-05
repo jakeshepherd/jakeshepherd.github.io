@@ -6,7 +6,7 @@ h1 {
     margin: auto;
     padding: 10px;
     text-align: center;
-    width: 80%;
+    width: 50%;
     border-bottom: #ddd 1px solid;
 }
 
@@ -38,7 +38,7 @@ h1 {
 
 .hobbie-descriptions {
     margin: auto;
-    width: 50%;
+    width: 40%;
 }
 
 .hobbies {
