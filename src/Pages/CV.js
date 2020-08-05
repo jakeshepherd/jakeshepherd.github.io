@@ -2,12 +2,14 @@ import React, {Component} from 'react';
 
 import "../CSS/CV.css";
 import WorkExperience from "../Components/WorkExperience";
+import Education from "../Components/Education";
+import Hobbies from "../Components/Hobbies";
 
 class CV extends Component {
     render() {
         return (
             <div>
-                <h1>CV!</h1>
+                <h1>Work Experience</h1>
                 <WorkExperience
                     works={[
                         {
@@ -28,6 +30,30 @@ class CV extends Component {
                         }
                     ]}
                 />
+                <h1>Education</h1>
+                <Education
+                    educations={[
+                        {
+                            level: "Computer Science Bsc",
+                            establishment: "University of Bath",
+                            date: "10/2017 - 05/2021",
+                            grades: "Entering my final year of a 4 year course with Industrial Placement"
+                        },
+                        {
+                            level: "College",
+                            establishment: "Alton College",
+                            date: "09/2015 - 06/2017",
+                            grades: "Graduating with 3 A's in Biology, Chemistry and Mathematics"
+                        },
+                        {
+                            level: "Secondary School",
+                            establishment: "Perins School",
+                            date: "09/2010 - 05/2015",
+                            grades: "Graduating with an A*, 7 A's and 2 B's"
+                        }
+                    ]}
+                />
+                <Hobbies />
             </div>
         );
     }

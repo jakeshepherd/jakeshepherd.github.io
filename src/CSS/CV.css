@@ -1,3 +1,7 @@
+h1 {
+    text-align: center;
+}
+
 .work-experience {
     margin: auto;
     padding: 10px;
@@ -6,12 +10,37 @@
     border-bottom: #ddd 1px solid;
 }
 
+.work-experience h3 {
+    text-align: left;
+}
+
+.work-experience p {
+    text-align: left;
+}
+
 .company {
-    margin: auto;
     padding-left: 5px;
     padding-right: 5px;
     width: fit-content;
     background-color: dodgerblue;
     color: white;
     border-radius: 10px;
+}
+
+.establishment {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: fit-content;
+    background-color: #20c997;
+    color: white;
+    border-radius: 10px;
+}
+
+.hobbie-descriptions {
+    margin: auto;
+    width: 50%;
+}
+
+.hobbies {
+    text-align: center;
 }

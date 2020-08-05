@@ -9,9 +9,9 @@ class WorkExperience extends Component {
                 {this.props.works.map((work, index) => {
                     return (
                         <div className={"work-experience"} id={index}>
-                            <h2>{work.title}</h2>
+                            <h3>{work.title}</h3>
                             <p className={"company"}><strong>{work.company}</strong></p>
-                            <h3>{work.date}</h3>
+                            <p>{work.date}</p>
                             <p>{work.description}</p>
                         </div>
                     );
