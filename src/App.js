@@ -1,11 +1,14 @@
 import React from 'react';
-import './CSS/App.css';
-import Nav from "./Pages/Nav";
-import Footer from "./Pages/Footer";
 import {Switch, Route} from 'react-router-dom';
-import Home from "./Pages/Home";
-import Projects from "./Pages/Projects";
+
+import './CSS/App.css';
+
 import Contact from "./Pages/Contact";
+import CV from "./Pages/CV";
+import Footer from "./Pages/Footer";
+import Home from "./Pages/Home";
+import Nav from "./Pages/Nav";
+import Projects from "./Pages/Projects";
 
 function App() {
     return (
@@ -14,6 +17,7 @@ function App() {
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route path="/projects" component={Projects}/>
+                <Route path="/cv" component={CV}/>
                 <Route path={"/contact"} component={Contact}/>
             </Switch>
             <Footer/>
