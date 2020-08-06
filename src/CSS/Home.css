@@ -1,21 +1,43 @@
-.center-page {
-    text-align: center;
+/*this is for normal screens*/
+@media only screen and (min-width: 541px) {
+    span.spacer:after {
+        display:inline-block;
+        margin-bottom: 50px;
+        margin-top: 30px;
+        width:100%;
+        content:".";
+        font-size:0;
+        color:transparent;
+        height:2px;
+        background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#000), to(#fff));
+        vertical-align:middle;
+        position:relative;
+        top:15px;
+        bottom: 15px;
+    }
 }
 
-span.spacer:after {
-    display:inline-block;
-    margin-bottom: 50px;
-    margin-top: 30px;
-    width:100%;
-    content:".";
-    font-size:0;
-    color:transparent;
-    height:2px;
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#000), to(#fff));
-    vertical-align:middle;
-    position:relative;
-    top:15px;
-    bottom: 15px;
+/*this is for phone screens*/
+@media only screen and (max-width: 540px) {
+    span.spacer:after {
+        display:inline-block;
+        margin-bottom: 50px;
+        margin-top: 30px;
+        width:100%;
+        content:".";
+        font-size:0;
+        color:transparent;
+        height:2px;
+        background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 200, from(#000), to(#fff));
+        vertical-align:middle;
+        position:relative;
+        top:15px;
+        bottom: 15px;
+    }
+}
+
+.center-page {
+    text-align: center;
 }
 
 .contact-me {
