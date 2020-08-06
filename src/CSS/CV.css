@@ -31,6 +31,11 @@ h1 {
         float: right;
     }
 
+    .hobbie-descriptions {
+        margin: auto;
+        width: 40%;
+    }
+
     .work-experience {
         max-width: 100%;
         margin: auto;
@@ -64,6 +69,10 @@ h1 {
         padding-top: 30px;
     }
 
+    .hobbie-descriptions {
+        margin: auto;
+        width: 80%;
+    }
 }
 
 .work-experience h3 {
@@ -91,11 +100,6 @@ h1 {
     background-color: #20c997;
     color: white;
     border-radius: 2em;
-}
-
-.hobbie-descriptions {
-    margin: auto;
-    width: 40%;
 }
 
 .hobbies {
