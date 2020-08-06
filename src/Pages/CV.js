@@ -54,11 +54,15 @@ class CV extends Component {
                 />
                 <ContactInfo />
                 <Hobbies />
-
-                <a className={"icon-ref"} target="_blank" href="https://icons8.com/icons/set/planner">Planner icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-                <a className={"icon-ref"} target="_blank" href="https://icons8.com/icons/set/person-male">Person icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-                <a className={"icon-ref"} target="_blank" href="https://icons8.com/icons/set/phone">Phone icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-                <a className={"icon-ref"} target="_blank" href="https://icons8.com/icons/set/email">Email icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+                <div className={"references"}>
+                    <a className={"icon-ref"} target="_blank" href="https://icons8.com/icons/set/planner">Planner icon</a> icon by <a className={"icon-ref"} target="_blank" href="https://icons8.com">Icons8</a>
+                    <br />
+                    <a className={"icon-ref"} target="_blank" href="https://icons8.com/icons/set/person-male">Person icon</a> icon by <a className={"icon-ref"} target="_blank" href="https://icons8.com">Icons8</a>
+                    <br />
+                    <a className={"icon-ref"} target="_blank" href="https://icons8.com/icons/set/phone">Phone icon</a> icon by <a className={"icon-ref"} target="_blank" href="https://icons8.com">Icons8</a>
+                    <br />
+                    <a className={"icon-ref"} target="_blank" href="https://icons8.com/icons/set/email">Email icon</a> icon by <a className={"icon-ref"} target="_blank" href="https://icons8.com">Icons8</a>
+                </div>
             </div>
         );
     }
