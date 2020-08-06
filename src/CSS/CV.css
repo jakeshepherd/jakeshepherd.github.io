@@ -6,25 +6,83 @@ h1 {
     margin: 30px;
 }
 
-.date {
-    margin-top: -70px;
-    opacity: .8;
-    font-size: .8rem;
-    font-weight: 900;
-    color: #6c757d;
-    float: right;
+/*this is for normal screens*/
+@media only screen and (min-width: 541px) {
+    .contact-info-box {
+        -webkit-box-shadow: 0px 0px 53px -18px rgba(0,0,0,0.28);
+        -moz-box-shadow: 0px 0px 53px -18px rgba(0,0,0,0.28);
+        box-shadow: 0 2px 10px rgba(0,0,0,.1);
+
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        height: 350px;
+        width: 30%;
+
+        padding-top: 30px;
+    }
+
+    .date {
+        margin-top: -70px;
+        opacity: .8;
+        font-size: .8rem;
+        font-weight: 900;
+        color: #6c757d;
+        float: right;
+    }
+
+    .hobbie-descriptions {
+        margin: auto;
+        width: 40%;
+    }
+
+    .work-experience {
+        max-width: 100%;
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+        width: 50%;
+        border-bottom: #ddd 1px solid;
+    }
 }
 
-.work-experience {
-    margin: auto;
-    padding: 10px;
-    text-align: center;
-    width: 50%;
-    border-bottom: #ddd 1px solid;
+/*this is for phone screens*/
+@media only screen and (max-width: 540px) {
+    .work-experience{
+        display: inline-grid;
+        grid-column-gap: 100px;
+        margin-left: 40px;
+        width: 80%;
+    }
+
+    .contact-info-box {
+        -webkit-box-shadow: 0px 0px 53px -18px rgba(0,0,0,0.28);
+        -moz-box-shadow: 0px 0px 53px -18px rgba(0,0,0,0.28);
+        box-shadow: 0 2px 10px rgba(0,0,0,.1);
+
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        width: 90%;
+        height: 80%;
+
+        padding-bottom: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+    }
+
+    .hobbie-descriptions {
+        margin: auto;
+        width: 80%;
+    }
 }
 
 .work-experience h3 {
     text-align: left;
+}
+
+.description {
+    color: #6c757d!important;
 }
 
 .work-experience p {
@@ -50,32 +108,9 @@ h1 {
     border-radius: 2em;
 }
 
-.hobbie-descriptions {
-    margin: auto;
-    width: 40%;
-}
-
 .hobbies {
     color: #6c757d!important;
     text-align: center;
-}
-
-.description {
-    color: #6c757d!important;
-}
-
-.contact-info-box {
-    -webkit-box-shadow: 0px 0px 53px -18px rgba(0,0,0,0.28);
-    -moz-box-shadow: 0px 0px 53px -18px rgba(0,0,0,0.28);
-    box-shadow: 0 2px 10px rgba(0,0,0,.1);
-
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    height: 350px;
-    width: 30%;
-
-    padding-top: 30px;
 }
 
 .contact-info {
@@ -89,7 +124,7 @@ h1 {
 }
 
 .contact-info-icons {
-    margin-left: 20px;
+    margin-left: 25px;
     width: 14%;
 }
 

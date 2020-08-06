@@ -54,6 +54,7 @@ class CV extends Component {
                 />
                 <ContactInfo />
                 <Hobbies />
+                <span className="spacer"/>
                 <div className={"references"}>
                     <a className={"icon-ref"} target="_blank" href="https://icons8.com/icons/set/planner">Planner icon</a> icon by <a className={"icon-ref"} target="_blank" href="https://icons8.com">Icons8</a>
                     <br />
