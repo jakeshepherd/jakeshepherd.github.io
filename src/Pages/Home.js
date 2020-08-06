@@ -36,7 +36,7 @@ class Home extends Component {
                 </p>
 
                 <ContactButton />
-
+                <span className="spacer"/>
                 <br />
                 <br />
                 <a target="_blank" href="https://icons8.com/icons/set/communication-skill">Communication Skill icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
