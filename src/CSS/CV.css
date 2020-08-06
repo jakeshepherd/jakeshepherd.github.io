@@ -6,22 +6,38 @@ h1 {
     margin: 30px;
 }
 
-.date {
-    margin-top: -70px;
-    opacity: .8;
-    font-size: .8rem;
-    font-weight: 900;
-    color: #6c757d;
-    float: right;
+/*this is for normal screens*/
+@media only screen and (min-width: 541px) {
+    .work-experience {
+        max-width: 100%;
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+        width: 50%;
+        border-bottom: #ddd 1px solid;
+    }
+
+    .date {
+        margin-top: -70px;
+        opacity: .8;
+        font-size: .8rem;
+        font-weight: 900;
+        color: #6c757d;
+        float: right;
+    }
 }
 
-.work-experience {
-    margin: auto;
-    padding: 10px;
-    text-align: center;
-    width: 50%;
-    border-bottom: #ddd 1px solid;
+/*this is for phone screens*/
+@media only screen and (max-width: 540px) {
+    .work-experience{
+        display: inline-grid;
+        grid-column-gap: 100px;
+        margin-left: 40px;
+        width: 80%;
+    }
+
 }
+
 
 .work-experience h3 {
     text-align: left;
@@ -58,10 +74,6 @@ h1 {
 .hobbies {
     color: #6c757d!important;
     text-align: center;
-}
-
-.description {
-    color: #6c757d!important;
 }
 
 .contact-info-box {
