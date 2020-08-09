@@ -27,7 +27,7 @@ class Home extends Component {
                     skills={[
                         {name: "Test Driven Development", image: Communication, description: "Throughout my placement year I have been mentored by my peers and taken a training course in Test Driven Development. It is something I am passionate about and I believe it creates a more robust codebase."},
                         {name: "Full Stack Development", image: Coding, description: "I have dedicated time to further my skills in both back end and front end languages. I am competent in PHP frameworks like Laravel, Javascript frameworks like React and database languages like mySQL."},
-                        {name: "Clean code", image: CleanCode, description: "I like my code...clean"},
+                        {name: "Clean code", image: CleanCode, description: "I have a passion for clean, well architected code and I have experience using MVC as one of many ways to effectively architect a project."},
                     ]}
                 />
                 <span className="spacer"/>
