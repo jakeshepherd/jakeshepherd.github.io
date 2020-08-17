@@ -18,6 +18,7 @@ class Projects extends Component {
                 <LargeProject
                     name={"Personal Dashboard"}
                     image={PersonalDashboard}
+		    details={"Whilst it is still not entirely finished, a work in progress can be seen at http://personal-dashboa		     rd-test.herokuapp.com/"}
                 />
                 <span className="spacer" />
                 <LargeProject
