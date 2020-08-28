@@ -10,3 +10,15 @@
     width: fit-content;
     border-radius: 5px;
 }
+
+h2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+input {
+    border-radius: 5px;
+}
+label {
+    padding-top: 5px;
+}
