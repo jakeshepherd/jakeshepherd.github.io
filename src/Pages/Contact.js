@@ -18,7 +18,7 @@ class Contact extends Component {
                     <label>Message</label>
                     <input type={"textarea"} name={"name"} />
                     <br />
-                    <button>Submit</button>
+                    <button className={"contact-me"}>Submit</button>
                 </form>
             </div>
         )
