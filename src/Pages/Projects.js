@@ -14,11 +14,11 @@ class Projects extends Component {
     render() {
         return (
             <div className={"center-page"}>
-                <h1>Projects</h1>
+                <h1 className={"project-title"}>Projects</h1>
                 <LargeProject
                     name={"Personal Dashboard"}
                     image={PersonalDashboard}
-		    details={"Whilst it is still not entirely finished, a work in progress can be seen at http://personal-dashboa		     rd-test.herokuapp.com/"}
+                    details={<span>Whilst it is still not entirely finished, a work in progress can be seen at <a href={"http://personal-dashboard.live/"}>personal-dashboard.live/</a></span>}
                 />
                 <span className="spacer" />
                 <LargeProject
