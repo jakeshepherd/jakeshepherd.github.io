@@ -14,7 +14,7 @@ class Hobbies extends Component {
                 <p className={"hobbies"}>
                     I have also always been passionate about football,
                     again, starting from a young age I started playing as goalkeeper in my youth side up to the age of 18.
-                    I also competed for my college were I was the captain of the first team for both first year and second year.
+                    I also competed for my college where I was the captain of the first team for both first year and second year.
                 </p>
                 <p className={"hobbies"}>
                     Due to the lockdown created from the COVID-19 pandemic, I wanted to learn something new.
