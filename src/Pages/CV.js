@@ -5,6 +5,7 @@ import WorkExperience from "../Components/WorkExperience";
 import Education from "../Components/Education";
 import Hobbies from "../Components/Hobbies";
 import ContactInfo from "../Components/ContactInfo";
+import CVSkills from "../Components/CVSkills";
 
 class CV extends Component {
     render() {
@@ -30,6 +31,7 @@ class CV extends Component {
                         }
                     ]}
                 />
+                <CVSkills />
                 <Education
                     educations={[
                         {
