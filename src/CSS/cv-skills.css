@@ -1,5 +1,7 @@
-.skills-header {
+li {
+    color: #6c757d!important;
 }
+
 .skills-div {
     margin: auto;
     width: fit-content;
