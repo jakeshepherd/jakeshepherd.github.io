@@ -15,7 +15,7 @@ class ProjectImage extends Component {
                 <div className={"row"}>
                     <Link to={"/projects"}>
                         <div className={"container"}>
-                            <img src={Route1} alt={"This image isn't available right now"}/>
+                            <img src={Route1} alt={"This isn't available right now"}/>
                             <div className="overlay">
                                 <p className="image-header"><strong>Route 1</strong></p>
                                 <p className="image-text">An android application that determines best routes based on previous journeys a user has gone on </p>
@@ -25,7 +25,7 @@ class ProjectImage extends Component {
 
                     <Link to={"/projects"}>
                         <div className={"container"}>
-                            <img src={Tamago} alt={"This image isn't available right now"}/>
+                            <img src={Tamago} alt={"This isn't available right now"}/>
                             <div className="overlay">
                                 <p className="image-header"><strong>Tamago</strong></p>
                                 <p className="image-text">An android application that will advice recipes based on the food you have left in your household.</p>
@@ -36,7 +36,7 @@ class ProjectImage extends Component {
                     <Link to={"/projects"}>
                         <div className={"container"}>
                             <img src={PersonalDashboard}
-                                 alt={"This image isn't available right now"}/>
+                                 alt={"This isn't available right now"}/>
                             <div className="overlay">
                                 <p className="image-header"><strong>Personal Dashboard</strong></p>
                                 <p className="image-text">A website created in Laravel to act as a users first page they hit when they open up their internet browser.</p>

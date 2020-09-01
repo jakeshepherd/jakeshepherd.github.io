@@ -125,8 +125,17 @@ h1 {
 }
 
 .contact-info-icons {
-    margin-left: 25px;
-    width: 14%;
+     margin-left: 25px;
+     width: 11%;
+}
+
+.contact-info-icons-linkedin {
+    margin-left: 20px;
+    width: 11%;
+}
+
+.contact-info-linkedin {
+    color: #007bff;
 }
 
 .icon-ref {
