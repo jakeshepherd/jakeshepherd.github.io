@@ -32,7 +32,7 @@ class ContactInfo extends Component {
                 <div className={"contact-info-row"}>
                     <img className={"contact-info-icons-linkedin"} src={LinkedIn} alt={"Sorry, this could not be loaded."}/>
                     <a href={"https://www.linkedin.com/in/jacob-shepherd-713719159/"}
-                       className={"contact-info"}>linkedin.com/in/jacob-shepherd</a>
+                       className={"contact-info-linkedin"}>linkedin.com/in/jacob-shepherd</a>
                 </div>
             </div>
         );
