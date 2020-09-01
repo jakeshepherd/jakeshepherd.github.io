@@ -9,7 +9,7 @@ class Education extends Component {
                 <h1 className={"CV-header"}>Education</h1>
                 {this.props.educations.map((education, index) => {
                     return (
-                        <div className={"work-experience"} id={index}>
+                        <div className={"work-experience"} key={index}>
                             <h3>{education.level}</h3>
                             <p className={"establishment"}><strong>{education.establishment}</strong></p>
                             <p className={"date"}>{education.date}</p>
