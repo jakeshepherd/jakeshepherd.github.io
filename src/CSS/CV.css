@@ -76,6 +76,10 @@ h1 {
         margin: auto;
         width: 80%;
     }
+
+    .contact-info-linkedin {
+        font-size: 15px;
+    }
 }
 
 .work-experience h3 {
