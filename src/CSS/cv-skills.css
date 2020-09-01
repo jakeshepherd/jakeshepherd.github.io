@@ -1,0 +1,19 @@
+.skills-header {
+}
+.skills-div {
+    margin: auto;
+    width: fit-content;
+    padding: 20px;
+}
+
+.left-soft {
+    display:inline-block;
+    text-align: left;
+    margin-right: 50px;
+    margin-left: 80px;
+}
+
+.right-hard {
+    display:inline-block;
+    float: right;
+}

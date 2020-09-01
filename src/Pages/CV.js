@@ -31,7 +31,10 @@ class CV extends Component {
                         }
                     ]}
                 />
-                <CVSkills />
+                <CVSkills
+                    soft={['Facilitation', 'Scrum', 'Agile', 'Communication']}
+                    hard={['React', 'PHP', 'mySQL', 'Test Driven Development', 'Debugging']}
+                />
                 <Education
                     educations={[
                         {
