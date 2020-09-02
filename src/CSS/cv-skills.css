@@ -4,7 +4,7 @@ li {
 }
 
 .skills-div {
-    margin: auto;
+    margin: auto auto 80px;
     width: fit-content;
     padding: 20px;
 }
