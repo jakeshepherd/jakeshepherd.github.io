@@ -1,1 +1,1 @@
-Available at jakeshepherd.me
+Available at http://jakeshepherd.me/
