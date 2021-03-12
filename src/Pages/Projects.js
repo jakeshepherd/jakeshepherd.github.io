@@ -4,6 +4,7 @@ import Tamago from '../Images/Tamago.jpg';
 import Route1 from '../Images/Route1.jpg';
 import MoneyManager from '../Images/MoneyManager.jpg';
 import PersonalDashboard from '../Images/PersonalDashboard.png';
+import ClubFootDashboard from '../Images/ClubFootDashboard.png';
 
 import '../CSS/Projects.css';
 
@@ -15,6 +16,13 @@ class Projects extends Component {
         return (
             <div className={"center-page"}>
                 <h1 className={"project-title"}>Projects</h1>
+                <LargeProject
+                    name={"Club Foot Dashboard"}
+                    image={ClubFootDashboard}
+                    details={"This site allows families to monitor their adherence to the Boots and Bars that are part of the treatment for" +
+                    " Club Foot. The site also contains other information for families and has an outcome questionnaire to make the appointment process more seamless."}
+                />
+                <span className="spacer" />
                 <LargeProject
                     name={"Personal Dashboard"}
                     image={PersonalDashboard}
