@@ -18,7 +18,8 @@ class Projects extends Component {
                 <LargeProject
                     name={"Personal Dashboard"}
                     image={PersonalDashboard}
-                    details={<span>Whilst it is still not entirely finished, a work in progress can be seen at <a href={"http://personal-dashboard.live/"}>personal-dashboard.live/</a></span>}
+                    details={"The Personal Dashboard allows users to keep up with their tasks via a todo list, " +
+                            "and also view other information they might need, like see what they're currently listening to on Spotify."}
                 />
                 <span className="spacer" />
                 <LargeProject
