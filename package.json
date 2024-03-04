@@ -16,7 +16,7 @@
     "reactstrap": "^8.5.1",
     "styled-components": "^5.1.1"
   },
-  "homepage": "http://jakeshepherd.me/",
+  "homepage": "https://jakeshepherd.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
