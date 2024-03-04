@@ -16,6 +16,14 @@ class CV extends Component {
                         {
                             title: "Software Engineer",
                             company: "Mayden",
+                            date: "07/2021 - 03/2024",
+                            description:
+                                "Continuing to develop skills in full stack development working on Electronic Patient Record software whilst handling sensitive data. " +
+                                "Working across multiple teams to deliver work to deadline with customers across the world."
+                        },
+                        {
+                            title: "Placement Software Engineer",
+                            company: "Mayden",
                             date: "07/2019 - 07/2020",
                             description:
                                 "Working as a Software Developer as part of my Industrial Year at University, " +
@@ -34,16 +42,16 @@ class CV extends Component {
                     ]}
                 />
                 <CVSkills
-                    soft={['Facilitation', 'Scrum', 'Agile', 'Communication']}
-                    hard={['React', 'PHP', 'mySQL', 'Test Driven Development', 'Debugging', 'HTML', 'CSS']}
+                    soft={['Scrum', 'Agile']}
+                    hard={['JS', 'PHP', 'SQL', 'Test Driven Development', 'Eloquent']}
                 />
                 <Education
                     educations={[
                         {
                             level: "Computer Science Bsc",
                             establishment: "University of Bath",
-                            date: "10/2017 - 05/2021",
-                            grades: "Entering my final year of a 4 year course with Industrial Placement"
+                            date: "2017 - 2021",
+                            grades: "Graduating with a 2:1."
                         },
                         {
                             level: "College",
@@ -51,12 +59,6 @@ class CV extends Component {
                             date: "09/2015 - 06/2017",
                             grades: "Graduating with 3 A's in Biology, Chemistry and Mathematics"
                         },
-                        {
-                            level: "Secondary School",
-                            establishment: "Perins School",
-                            date: "09/2010 - 05/2015",
-                            grades: "Graduating with an A*, 7 A's and 2 B's"
-                        }
                     ]}
                 />
                 <ContactInfo/>

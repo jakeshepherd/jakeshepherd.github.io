@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Contact from "../Pages/Contact.js";
+import ContactInfo from './ContactInfo.js';
 
 class ContactButton extends Component {
     constructor(props) {
@@ -20,7 +20,7 @@ class ContactButton extends Component {
             <React.Fragment>
                 <button className={"contact-me"} onClick={this.onContactClick}><strong>Contact me</strong></button>
                 {this.state.showComponent ?
-                    <Contact /> :
+                    <ContactInfo /> :
                     null
                 }
             </React.Fragment>
