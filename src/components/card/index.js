@@ -322,7 +322,7 @@ export const CardStack = () => {
             ],
             moreInformation: "My placement year was a great opportunity for me to gain experience working on small tickets that were part of larger projects.\n\nAs a newcomer to development, I realised how important it is to be able to pick up new skills and technologies quickly, a skill I have continued evolve throughout my career."
         },
-        { id: 2, name: "July '21 - March '24", balance: "Mayden", description: "Returning as a full stack developer to support and create new features in an application that supported over <b>8 million patients</b> and progressing to be one of the most senior members of the team (PHP, Javascript, MySQL)", variant: 'secondary',
+        { id: 2, name: "July '21 - March '24", balance: "Mayden", description: "Returning full stack developer creating features for an application supporting <b>8M+ patients</b>, progressing to senior team member (PHP, Javascript, MySQL)", variant: 'secondary',
             transactions: [
                 { id: 6, title: "Taking on a leadership role, facilitating open and transparent team wide discussions as well as contributing with my own opinions to create a safe and secure application.", icon: "🗣️" },
                 { id: 5, title: "Cross team communication with stakeholders, product owners & UX teams of the software to discuss and prioritise current work and help garden backlogs", icon: "🪴" },
