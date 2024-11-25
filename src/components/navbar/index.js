@@ -109,8 +109,25 @@ const ContactText = styled.div`
     }
 `;
 
+const WhyMonzoButton = styled.button`
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 24px;
+    font-weight: 600;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+`;
+
 export const Navbar = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const [isWhyMonzoOpen, setIsWhyMonzoOpen] = useState(false);
 
     const contactDetails = [
         {
@@ -130,6 +147,29 @@ export const Navbar = () => {
         }
     ];
 
+    const whyMonzoReasons = [
+        {
+            icon: "🚀",
+            label: "Innovation",
+            value: "The opportunity to innovate and build products that are used by millions of customers daily"
+        },
+        {
+            icon: "💪",
+            label: "Impact",
+            value: "Putting users at the forefront of technology to give them the best experience"
+        },
+        {
+            icon: "🌱",
+            label: "Growth",
+            value: "Exceptional learning and development opportunities"
+        },
+        {
+            icon: "🧑‍🍳",
+            label: "Culture",
+            value: "A welcoming environment to help it's employees grow"
+        }
+    ];
+
     return (
         <>
             <NavbarContainer>
@@ -138,10 +178,12 @@ export const Navbar = () => {
                         <ProfilePicture imageUrl={jake} />
                         <ContactDetails>
                             Contact Details
-                            <Arrow>→</Arrow>
                         </ContactDetails>
                     </ProfileContainer>
                 </div>
+                <WhyMonzoButton onClick={() => setIsWhyMonzoOpen(true)}>
+                    Why Monzo?
+                </WhyMonzoButton>
             </NavbarContainer>
 
             <PopupOverlay 
@@ -157,6 +199,25 @@ export const Navbar = () => {
                             <ContactText>
                                 <span>{contact.label}</span>
                                 <span>{contact.value}</span>
+                            </ContactText>
+                        </ContactItem>
+                    ))}
+                </PopupContent>
+            </PopupOverlay>
+
+            <PopupOverlay 
+                isOpen={isWhyMonzoOpen} 
+                onClick={() => setIsWhyMonzoOpen(false)}
+            >
+                <PopupContent onClick={e => e.stopPropagation()}>
+                    {whyMonzoReasons.map((reason, index) => (
+                        <ContactItem key={index}>
+                            <IconWrapper>
+                                {reason.icon}
+                            </IconWrapper>
+                            <ContactText>
+                                <span>{reason.label}</span>
+                                <span>{reason.value}</span>
                             </ContactText>
                         </ContactItem>
                     ))}
