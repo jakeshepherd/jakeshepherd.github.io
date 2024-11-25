@@ -8,6 +8,7 @@ const CardContainer = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
+    overflow-x: hidden;
     overflow-y: auto;
     min-height: 100vh;
 `;
@@ -256,6 +257,42 @@ const TransactionsHeader = styled.div`
     margin-bottom: 16px;
 `;
 
+const ScrollContainer = styled.div`
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    box-sizing: border-box;
+
+    /* Hide scrollbar but keep functionality */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+`;
+
+const ColorBox = styled.div`
+    min-width: 200px;
+    height: 150px;
+    border-radius: 12px;
+    position: relative;
+    background-color: ${props => props.bgColor};
+    flex-shrink: 0;
+`;
+
+const BoxText = styled.span`
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+`;
+
 export const CardStack = () => {
     const [activeCard, setActiveCard] = useState(null);
     const [showTransactions, setShowTransactions] = useState(false);
@@ -322,104 +359,127 @@ export const CardStack = () => {
     };
 
     return (
-        <CardContainer>
-            {cards.map((card) => (
-                <CardPage
-                    key={card.id}
-                    isActive={activeCard === card.id}
-                    onClick={() => handleCardClick(card.id)}
-                    style={{ zIndex: activeCard === card.id ? 2 : 1 }}
-                    variant={card.variant}
-                >
-                    <Logo>{card.name}</Logo>
-                    <Balance>{card.balance}</Balance>
-                    <Description dangerouslySetInnerHTML={{ __html: card.description }} />
-                    
-                    {activeCard === card.id && (
-                        <>
-                            <ActionButton variant={card.variant} onClick={(e) => {
-                                e.stopPropagation();
-                                setPopupCardId(card.id);
-                            }}>
-                                More Information
-                            </ActionButton>
-                            
-                            {card.transactions && (
-                                <TransactionsList isVisible={showTransactions}>
-                                    <TransactionsTitle>Experience Details</TransactionsTitle>
-                                    {card.transactions.map(transaction => (
-                                        <TransactionItem key={transaction.id}>
-                                            <IconContainer>
-                                                {transaction.icon}
-                                            </IconContainer>
-                                            <TransactionDetails>
-                                                {transaction.title}
-                                            </TransactionDetails>
-                                        </TransactionItem>
-                                    ))}
-                                </TransactionsList>
-                            )}
-                        </>
-                    )}
-                </CardPage>
-            ))}
+        <>
+            <CardContainer>
+                {cards.map((card) => (
+                    <CardPage
+                        key={card.id}
+                        isActive={activeCard === card.id}
+                        onClick={() => handleCardClick(card.id)}
+                        style={{ zIndex: activeCard === card.id ? 2 : 1 }}
+                        variant={card.variant}
+                    >
+                        <Logo>{card.name}</Logo>
+                        <Balance>{card.balance}</Balance>
+                        <Description dangerouslySetInnerHTML={{ __html: card.description }} />
+                        
+                        {activeCard === card.id && (
+                            <>
+                                <ActionButton variant={card.variant} onClick={(e) => {
+                                    e.stopPropagation();
+                                    setPopupCardId(card.id);
+                                }}>
+                                    More Information
+                                </ActionButton>
+                                
+                                {card.transactions && (
+                                    <TransactionsList isVisible={showTransactions}>
+                                        <TransactionsTitle>Experience Details</TransactionsTitle>
+                                        {card.transactions.map(transaction => (
+                                            <TransactionItem key={transaction.id}>
+                                                <IconContainer>
+                                                    {transaction.icon}
+                                                </IconContainer>
+                                                <TransactionDetails>
+                                                    {transaction.title}
+                                                </TransactionDetails>
+                                            </TransactionItem>
+                                        ))}
+                                    </TransactionsList>
+                                )}
+                            </>
+                        )}
+                    </CardPage>
+                ))}
 
-            {(!activeCard || isExiting) && (
-                <FixedTransactionsList 
-                    isExpanded={isTransactionsExpanded}
-                    isExiting={isExiting || activeCard !== null}
-                    onClick={() => setIsTransactionsExpanded(!isTransactionsExpanded)}
-                >
-                    <TransactionsHeader>
-                        <TransactionsTitle>Other Interests</TransactionsTitle>
-                        <span style={{ fontSize: '1.2rem' }}>
-                            {isTransactionsExpanded ? '↓' : '↑'}
-                        </span>
-                    </TransactionsHeader>
-                    <TransactionItem >
-                            <IconContainer>
-                                ⚽️
-                            </IconContainer>
-                            <TransactionDetails>
-                                I've recently joined a local futsal team
-                            </TransactionDetails>
-                        </TransactionItem>
-                    <TransactionItem >
-                            <IconContainer>
-                                🎾
-                            </IconContainer>
-                            <TransactionDetails>
-                                I have also joined a local tennis club and attend the weekly group sessions there
-                            </TransactionDetails>
-                        </TransactionItem>
-                    <TransactionItem >
-                            <IconContainer>
-                                🧗
-                            </IconContainer>
-                            <TransactionDetails>
-                                My partner and I have both started climbing in the last year
-                            </TransactionDetails>
-                        </TransactionItem>
-                    <TransactionItem >
-                            <IconContainer>
-                                🥾
-                            </IconContainer>
-                            <TransactionDetails>
-                                In general, getting out and about!
-                            </TransactionDetails>
-                        </TransactionItem>
-                </FixedTransactionsList>
-            )}
+                <ScrollContainer>
+                    <ColorBox bgColor="#FF6B6B">
+                        <BoxText>Typescript (Node JS)</BoxText>
+                    </ColorBox>
+                    <ColorBox bgColor="#4ECDC4">
+                        <BoxText>PHP</BoxText>
+                    </ColorBox>
+                    <ColorBox bgColor="#6C5B7B">
+                        <BoxText>MySQL</BoxText>
+                    </ColorBox>
+                    <ColorBox bgColor="#45B7D1">
+                        <BoxText>Docker</BoxText>
+                    </ColorBox>
+                    <ColorBox bgColor="#96CEB4">
+                        <BoxText>AWS</BoxText>
+                    </ColorBox>
+                    <ColorBox bgColor="#6C5B7B">
+                        <BoxText>React</BoxText>
+                    </ColorBox>
+                </ScrollContainer>
 
-            <Overlay isVisible={popupCardId !== null} onClick={() => setPopupCardId(null)} />
-            {popupCardId && (
-                <Popup isVisible={true}>
-                    <CloseButton onClick={() => setPopupCardId(null)}>×</CloseButton>
-                    <h2>More Information</h2>
-                    <p>{cards.find(card => card.id === popupCardId)?.moreInformation}</p>
-                </Popup>
-            )}
-        </CardContainer>
+                {(!activeCard || isExiting) && (
+                    <FixedTransactionsList 
+                        isExpanded={isTransactionsExpanded}
+                        isExiting={isExiting || activeCard !== null}
+                        onClick={() => setIsTransactionsExpanded(!isTransactionsExpanded)}
+                    >
+                        <TransactionsHeader>
+                            <TransactionsTitle>Other Interests</TransactionsTitle>
+                            <span style={{ fontSize: '1.2rem' }}>
+                                {isTransactionsExpanded ? '↓' : '↑'}
+                            </span>
+                        </TransactionsHeader>
+                        <TransactionItem >
+                                <IconContainer>
+                                    ⚽️
+                                </IconContainer>
+                                <TransactionDetails>
+                                    I've recently joined a local futsal team
+                                </TransactionDetails>
+                            </TransactionItem>
+                        <TransactionItem >
+                                <IconContainer>
+                                    🎾
+                                </IconContainer>
+                                <TransactionDetails>
+                                    I have also joined a local tennis club and attend the weekly group sessions there
+                                </TransactionDetails>
+                            </TransactionItem>
+                        <TransactionItem >
+                                <IconContainer>
+                                    🧗
+                                </IconContainer>
+                                <TransactionDetails>
+                                    My partner and I have both started climbing in the last year
+                                </TransactionDetails>
+                            </TransactionItem>
+                        <TransactionItem >
+                                <IconContainer>
+                                    🥾
+                                </IconContainer>
+                                <TransactionDetails>
+                                    In general, getting out and about!
+                                </TransactionDetails>
+                            </TransactionItem>
+                    </FixedTransactionsList>
+                )}
+
+                <Overlay isVisible={popupCardId !== null} onClick={() => setPopupCardId(null)} />
+                {popupCardId && (
+                    <Popup isVisible={true}>
+                        <CloseButton onClick={() => setPopupCardId(null)}>×</CloseButton>
+                        <h2>More Information</h2>
+                        <p>{cards.find(card => card.id === popupCardId)?.moreInformation}</p>
+                    </Popup>
+                )}
+            </CardContainer>
+        </>
     );
 };
 
