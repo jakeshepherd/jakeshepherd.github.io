@@ -210,15 +210,17 @@ const FixedTransactionsList = styled.div`
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    max-width: 400px;
+    width: 90%;
+    max-width: 385px;
     background: white;
     box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
     padding: 20px;
     overflow-y: auto;
-    z-index: 98;
     transition: all 0.3s ease;
     cursor: pointer;
+    z-index: ${props => props.isExpanded ? '98' : '1'};
+    opacity: 1;
+    transform: translate(-50%, 0);
 
     ${props => props.isExpanded ? `
         height: 80vh;
@@ -230,12 +232,17 @@ const FixedTransactionsList = styled.div`
         overflow: hidden;
     `}
 
+    ${props => props.isExiting && `
+        opacity: 0;
+        transform: translate(-50%, 100%);
+    `}
+
     @media (min-width: 421px) {
         ${props => !props.isExpanded && `
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
             bottom: 20px;
-            max-width: 400px;
+            max-width: 385px;
         `}
     }
 `;
@@ -252,6 +259,7 @@ export const CardStack = () => {
     const [showTransactions, setShowTransactions] = useState(false);
     const [popupCardId, setPopupCardId] = useState(null);
     const [isTransactionsExpanded, setIsTransactionsExpanded] = useState(false);
+    const [isExiting, setIsExiting] = useState(false);
 
     const cards = [
         {
@@ -299,11 +307,18 @@ export const CardStack = () => {
     const handleCardClick = (id) => {
         if (activeCard === id) {
             setShowTransactions(false);
-            setTimeout(() => setActiveCard(null), 300);
+            setTimeout(() => {
+                setActiveCard(null);
+                setIsExiting(false);
+            }, 300);
         } else {
-            setActiveCard(id);
-            setTimeout(() => setShowTransactions(true), 100);
+            setIsExiting(true);
+            setTimeout(() => {
+                setActiveCard(id);
+                setTimeout(() => setShowTransactions(true), 100);
+            }, 300);
         }
+        setIsTransactionsExpanded(false);
     };
 
     const allTransactions = cards.reduce((acc, card) => {
@@ -356,33 +371,52 @@ export const CardStack = () => {
                 </CardPage>
             ))}
 
-            <FixedTransactionsList 
-                isExpanded={isTransactionsExpanded}
-                onClick={() => setIsTransactionsExpanded(!isTransactionsExpanded)}
-            >
-                <TransactionsHeader>
-                    <TransactionsTitle>Other Interests</TransactionsTitle>
-                    <span style={{ fontSize: '1.2rem' }}>
-                        {isTransactionsExpanded ? '↓' : '↑'}
-                    </span>
-                </TransactionsHeader>
-                <TransactionItem >
-                        <IconContainer>
-                            ⚽️
-                        </IconContainer>
-                        <TransactionDetails>
-                            I play football for a local team
-                        </TransactionDetails>
-                    </TransactionItem>
-                <TransactionItem >
-                        <IconContainer>
-                            ⚽️
-                        </IconContainer>
-                        <TransactionDetails>
-                            I play football for a local team
-                        </TransactionDetails>
-                    </TransactionItem>
-            </FixedTransactionsList>
+            {(!activeCard || isExiting) && (
+                <FixedTransactionsList 
+                    isExpanded={isTransactionsExpanded}
+                    isExiting={isExiting || activeCard !== null}
+                    onClick={() => setIsTransactionsExpanded(!isTransactionsExpanded)}
+                >
+                    <TransactionsHeader>
+                        <TransactionsTitle>Other Interests</TransactionsTitle>
+                        <span style={{ fontSize: '1.2rem' }}>
+                            {isTransactionsExpanded ? '↓' : '↑'}
+                        </span>
+                    </TransactionsHeader>
+                    <TransactionItem >
+                            <IconContainer>
+                                ⚽️
+                            </IconContainer>
+                            <TransactionDetails>
+                                I've recently joined a local futsal team
+                            </TransactionDetails>
+                        </TransactionItem>
+                    <TransactionItem >
+                            <IconContainer>
+                                🎾
+                            </IconContainer>
+                            <TransactionDetails>
+                                I have also joined a local tennis club and attend the weekly group sessions there
+                            </TransactionDetails>
+                        </TransactionItem>
+                    <TransactionItem >
+                            <IconContainer>
+                                🧗
+                            </IconContainer>
+                            <TransactionDetails>
+                                My partner and I have both started climbing in the last year
+                            </TransactionDetails>
+                        </TransactionItem>
+                    <TransactionItem >
+                            <IconContainer>
+                                🥾
+                            </IconContainer>
+                            <TransactionDetails>
+                                In general, getting out and about!
+                            </TransactionDetails>
+                        </TransactionItem>
+                </FixedTransactionsList>
+            )}
 
             <Overlay isVisible={popupCardId !== null} onClick={() => setPopupCardId(null)} />
             {popupCardId && (

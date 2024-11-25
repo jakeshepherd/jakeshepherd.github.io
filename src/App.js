@@ -17,6 +17,7 @@ const AppPage = styled.div`
   background-color: #132136;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
   color: #fff;
 
