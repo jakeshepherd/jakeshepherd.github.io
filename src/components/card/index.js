@@ -293,6 +293,10 @@ const BoxText = styled.span`
     font-weight: 600;
 `;
 
+const Spacer = styled.div`
+    height: 100px;
+`
+
 export const CardStack = () => {
     const [activeCard, setActiveCard] = useState(null);
     const [showTransactions, setShowTransactions] = useState(false);
@@ -470,6 +474,7 @@ export const CardStack = () => {
                     </FixedTransactionsList>
                 )}
 
+                <Spacer />
                 <Overlay isVisible={popupCardId !== null} onClick={() => setPopupCardId(null)} />
                 {popupCardId && (
                     <Popup isVisible={true}>
