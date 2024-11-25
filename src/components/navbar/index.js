@@ -65,8 +65,8 @@ const PopupContent = styled.div`
     background: white;
     border-radius: 12px;
     padding: 24px;
-    width: 90%;
-    max-width: 400px;
+    width: 85%;
+    max-width: 350px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 `;
 

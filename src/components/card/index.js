@@ -65,20 +65,22 @@ const Balance = styled.div`
 const ActionButton = styled.button`
     background: rgba(255, 255, 255, 0.1);
     border: none;
-    border-radius: 8px;
-    padding: 8px 16px;
+    border-radius: 20px;
+    padding: 10px 20px;
     position: absolute;
     bottom: 20px;
     left: 20px;
     cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
 
     ${props => props.variant === 'primary' && `
-        background: linear-gradient(45deg, #EB5B5D, #EB5B5D);   
+        background: rgba(255, 255, 255, 0.2);
         color: white;
     `}
 
     ${props => props.variant === 'secondary' && `
-        background: linear-gradient(45deg, #FFFFFF, #FFFFFF);   
+        background: rgba(0, 0, 0, 0.1);
         color: black;
     `}
 `;
@@ -160,8 +162,8 @@ const Popup = styled.div`
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     z-index: 100;
-    width: 90%;
-    max-width: 500px;
+    width: 80%;
+    max-width: 340px;
     max-height: 80vh;
     overflow-y: auto;
     opacity: 0;
@@ -297,7 +299,7 @@ export const CardStack = () => {
                 { id: 1, title: "Working as a mid level developer and most senior member of the team", amount: "-£32.50", icon: "🧑‍💻", type: 'debit' },
                 { id: 2, title: "Developing project management skills by leading on new projects", amount: "+£2,500.00", icon: "✏️", type: 'credit' },
                 { id: 3, title: "Creating secure, scalable, robust code which has been vital to ensure the charity can continue to get volunteers, donations and record data in the field", amount: "-£15.99", icon: "🐕", type: 'debit' },
-                { id: 4, title: "As one of the first developers to join the technical team, I have been able to help shape a young team", amount: "-£9.99", icon: "👔", type: 'debit' },
+                { id: 4, title: "As one of the first developers to join the technical team, I have been able to help shape and coach a young team", amount: "-£9.99", icon: "👔", type: 'debit' },
                 { id: 5, title: "Building product expertise and knowledge to support growth", amount: "-£9.99", icon: "🧠", type: 'debit' },
             ],
             moreInformation: "In my current role, I have spent the last 3 months creating an authentication server for a single point of authentication for all of our volunteers. I have led this project and it's taught me a lot in ways to plan work, break up work and coach and mentor others so they can contribute to the project.\n\nOutside of this, I have been contributing to planning a new project coming up, as well as diving into finishing off an old project that was started before I joined"

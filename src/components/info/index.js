@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-import resumePDF from '../../jake-shepherd-cv.pdf';
+import resumePDF from '../../cv-jake-shepherd.pdf';
 
 const InfoBanner = styled.div`
     display: ${props => props.isVisible ? 'flex' : 'none'};
@@ -25,7 +25,7 @@ const IconContainer = styled.div`
 const TextContainer = styled.div`
     flex: 1;
     color: #1A1A1A;
-    font-size: 14px;
+    font-size: 16px;
 `;
 
 const CloseButton = styled.button`
@@ -53,7 +53,7 @@ export const Info = () => {
                 👋
             </IconContainer>
             <TextContainer>
-                Hello, I'm Jake! I'm a software developer with a passion for using technology to make a difference in people's lives.{' '}
+                Hello, I'm <strong>Jake!</strong> I'm a software developer with a passion for using technology to make a difference in people's lives.{' '}
                 <a href={resumePDF} target="_blank" rel="noopener noreferrer">
                     For more information, take a look at my CV
                 </a>
