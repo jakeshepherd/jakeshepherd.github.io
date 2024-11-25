@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-import resumePDF from '../../cv-jake-shepherd.pdf';
+import resumePDF from '../../career-journey.pdf';
 
 const InfoBanner = styled.div`
     display: ${props => props.isVisible ? 'flex' : 'none'};
