@@ -321,13 +321,6 @@ export const CardStack = () => {
         setIsTransactionsExpanded(false);
     };
 
-    const allTransactions = cards.reduce((acc, card) => {
-        return [...acc, ...(card.transactions.map(t => ({
-            ...t,
-            cardName: card.name
-        })))];
-    }, []);
-
     return (
         <CardContainer>
             {cards.map((card) => (
