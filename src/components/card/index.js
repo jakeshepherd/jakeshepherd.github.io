@@ -1,6 +1,19 @@
 import styled from "styled-components";
 import { useState } from "react";
 
+const sharedCardStyles = `
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+`;
+
+const sharedTransactionListStyles = `
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+`;
+
 const CardContainer = styled.div`
     position: relative;
     width: 100%;
@@ -16,34 +29,22 @@ const CardContainer = styled.div`
 const CardPage = styled.div`
     width: 75%;
     height: 200px;
-    border-radius: 12px;
-    padding: 20px;
-    position: relative;
     margin: -120px 0 0 0;
     transition: all 0.3s ease;
     cursor: pointer;
-
-    ${props => props.variant === 'primary' && `
-        background: linear-gradient(45deg, #EB5B5D, #EB5B5D);   
-        color: white;
-    `}
-    ${props => props.variant === 'secondary' && `
-        background: linear-gradient(45deg, #FFFFFF, #FFFFFF);   
-        color: black;
-    `}
+    ${sharedCardStyles}
 
     &:first-child {
         margin-top: 0;
     }
 
-    ${props => props.isActive && `
-        transform: scale(1.05);
-        z-index: 10;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    `}
-
-    ${props => !props.isActive && `
-        filter: brightness(0.9);
+    ${({ variant, isActive }) => `
+        background: ${variant === 'primary' ? '#EB5B5D' : '#FFFFFF'};
+        color: ${variant === 'primary' ? 'white' : 'black'};
+        transform: ${isActive ? 'scale(1.05)' : 'none'};
+        z-index: ${isActive ? '10' : 'auto'};
+        box-shadow: ${isActive ? '0 4px 20px rgba(0,0,0,0.2)' : 'none'};
+        filter: ${!isActive ? 'brightness(0.9)' : 'none'};
     `}
 `;
 
@@ -64,7 +65,6 @@ const Balance = styled.div`
 `;
 
 const ActionButton = styled.button`
-    background: rgba(255, 255, 255, 0.1);
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
@@ -75,14 +75,9 @@ const ActionButton = styled.button`
     font-size: 1.1rem;
     font-weight: 600;
 
-    ${props => props.variant === 'primary' && `
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-    `}
-
-    ${props => props.variant === 'secondary' && `
-        background: rgba(0, 0, 0, 0.1);
-        color: black;
+    ${({ variant }) => `
+        background: ${variant === 'primary' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.1)'};
+        color: ${variant === 'primary' ? 'white' : 'black'};
     `}
 `;
 
@@ -91,23 +86,9 @@ const TransactionsList = styled.div`
     left: 0;
     right: 0;
     top: 180px;
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    transition: all 0.3s ease;
-    z-index: 1;
     min-height: 200px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     margin-top: 60px;
-    opacity: 0;
-    transform: translateY(-20px);
-    pointer-events: none;
-    
-    ${props => props.isVisible && `
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: all;
-    `}
+    ${sharedTransactionListStyles}
 `;
 
 const TransactionsTitle = styled.h3`

@@ -8,7 +8,6 @@ const TransactionsPage = styled.div`
     background-color: #f0f0f0;
 `;
 
-
-export const Transactions = () => {
-    return <TransactionsPage>Transactions</TransactionsPage>;
-};
+export const Transactions = () => (
+    <TransactionsPage>Transactions</TransactionsPage>
+);

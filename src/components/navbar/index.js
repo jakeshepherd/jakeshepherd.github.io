@@ -3,23 +3,24 @@ import styled from 'styled-components';
 
 import jake from '../../jake.jpg';
 
-const NavbarContainer = styled.div`
+// Base styles for common patterns
+const FlexContainer = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 12px;
+`;
+
+const NavbarContainer = styled(FlexContainer)`
     position: sticky;
     top: 0;
     width: 100%;
     background: #132136;
     padding: 12px 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
     z-index: 100;
-    gap: 12px;
 `;
 
-const ProfileContainer = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 12px;
+const ProfileContainer = styled(FlexContainer)`
     cursor: pointer;
 `;
 

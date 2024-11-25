@@ -3,7 +3,7 @@ import { useState } from 'react';
 import resumePDF from '../../career-journey.pdf';
 
 const InfoBanner = styled.div`
-    display: ${props => props.isVisible ? 'flex' : 'none'};
+    display: ${({ isVisible }) => isVisible ? 'flex' : 'none'};
     align-items: center;
     background-color: #EBF5FF;
     border-radius: 8px;
@@ -49,18 +49,19 @@ export const Info = () => {
 
     return (
         <InfoBanner isVisible={isVisible}>
-            <IconContainer>
-                👋
-            </IconContainer>
+            <IconContainer>👋</IconContainer>
             <TextContainer>
-                Hello, I'm <strong>Jake!</strong> I'm a software developer with a passion for using technology to make a difference in people's lives.{' '}
-                <a href={resumePDF} target="_blank" rel="noopener noreferrer">
+                Hello, I'm <strong>Jake!</strong> I'm a software developer with a passion 
+                for using technology to make a difference in people's lives.{' '}
+                <a 
+                    href={resumePDF} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
                     For more information, take a look at my CV
                 </a>
             </TextContainer>
-            <CloseButton onClick={() => setIsVisible(false)}>
-                ✕
-            </CloseButton>
+            <CloseButton onClick={() => setIsVisible(false)}>✕</CloseButton>
         </InfoBanner>
     );
 };
