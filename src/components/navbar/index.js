@@ -39,7 +39,7 @@ const ContactDetails = styled.div`
     align-items: center;
     gap: 4px;
     font-size: 16px;
-    color: #4d6aff;
+    color: white;
     font-weight: 600;
 `;
 
