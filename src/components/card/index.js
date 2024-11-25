@@ -8,6 +8,8 @@ const CardContainer = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
+    overflow-y: auto;
+    min-height: 100vh;
 `;
 
 const CardPage = styled.div`
@@ -65,51 +67,16 @@ const ActionButton = styled.button`
     border: none;
     border-radius: 8px;
     padding: 8px 16px;
-    color: white;
     position: absolute;
     bottom: 20px;
+    left: 20px;
     cursor: pointer;
-    
-    &:first-of-type {
-        left: 20px;
-    }
-    
-    &:nth-of-type(2) {
-        left: 50%;
-        transform: translateX(-50%);
-    }
 
     ${props => props.variant === 'primary' && `
         background: linear-gradient(45deg, #EB5B5D, #EB5B5D);   
         color: white;
     `}
 
-    ${props => props.variant === 'secondary' && `
-        background: linear-gradient(45deg, #FFFFFF, #FFFFFF);   
-        color: black;
-    `}
-`;
-
-const MenuButton = styled.button`
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-
-    ${props => props.variant === 'primary' && `
-        background: linear-gradient(45deg, #EB5B5D, #EB5B5D);   
-        color: white;
-    `}
-    
     ${props => props.variant === 'secondary' && `
         background: linear-gradient(45deg, #FFFFFF, #FFFFFF);   
         color: black;
@@ -127,20 +94,11 @@ const TransactionsList = styled.div`
     transition: all 0.3s ease;
     z-index: 1;
     min-height: 200px;
-    max-height: calc(80vh - 180px);
-    height: auto;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     margin-top: 60px;
-    overflow-y: auto;
     opacity: 0;
     transform: translateY(-20px);
     pointer-events: none;
-    
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    
-    scrollbar-width: none;
     
     ${props => props.isVisible && `
         opacity: 1;
@@ -185,63 +143,180 @@ const TransactionDetails = styled.div`
 const Description = styled.div`
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 20px;
+    right: 20px;
+    transform: translateY(-50%);
     text-align: center;
     font-size: 1rem;
-    max-width: 80%;
+`;
+
+const Popup = styled.div`
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    z-index: 100;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: black;
+    white-space: pre-wrap;
+
+    ${props => props.isVisible && `
+        opacity: 1;
+        pointer-events: all;
+    `}
+`;
+
+const Overlay = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 99;
+
+    ${props => props.isVisible && `
+        opacity: 1;
+        pointer-events: all;
+    `}
+`;
+
+const CloseButton = styled.button`
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 4px;
+`;
+
+const FixedTransactionsList = styled.div`
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 98;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    ${props => props.isExpanded ? `
+        height: 80vh;
+        max-height: 600px;
+    ` : `
+        height: 80px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        overflow: hidden;
+    `}
+
+    @media (min-width: 421px) {
+        ${props => !props.isExpanded && `
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            bottom: 20px;
+            max-width: 400px;
+        `}
+    }
+`;
+
+const TransactionsHeader = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
 `;
 
 export const CardStack = () => {
     const [activeCard, setActiveCard] = useState(null);
     const [showTransactions, setShowTransactions] = useState(false);
+    const [popupCardId, setPopupCardId] = useState(null);
+    const [isTransactionsExpanded, setIsTransactionsExpanded] = useState(false);
 
     const cards = [
-        { 
-            id: 1, 
-            name: "June '19 - July '20", 
+        {
+            id: 1,
+            name: "June '19 - July '20",
             balance: "Mayden",
             description: "Placement full stack developer (PHP, Javascript, MySQL, AJAX)",
             variant: 'primary',
             transactions: [
-                { id: 1, title: "Adaptability to work across multiple teams to gain a variety of experiences", amount: "-£32.50", icon: "🏋️", type: 'debit' },
+                {
+                    id: 1,
+                    title: "Adaptability to work across multiple teams to gain a variety of experiences",
+                    amount: "-£32.50",
+                    icon: "🏋️",
+                    type: 'debit'
+                },
                 { id: 2, title: "First experience of working as a professional in technology", amount: "+£2,500.00", icon: "🧑‍💻", type: 'credit' },
                 { id: 3, title: "Working in an agile team where I was encouraged to share my thoughts", amount: "-£15.99", icon: "🧠", type: 'debit' },
-            ]
+            ],
+            moreInformation: "My placement year was a great opportunity for me to gain experience working on small tickets that were part of larger projects."
         },
-        { id: 2, name: "July '21 - March '24", balance: "Mayden", description: "Full stack developer (PHP, Javascript, MySQL, Laravel, Symfony, AJAX, React, TDD, Devops)", variant: 'secondary',
+        { id: 2, name: "July '21 - March '24", balance: "Mayden", description: "Coming back as a full stack developer and progressing to be one of the most senior members of the team (PHP, Javascript, MySQL)", variant: 'secondary',
             transactions: [
                 { id: 1, title: "Involved in strategic decision making about international product progression & wider market adaptation", amount: "-£32.50", icon: "📕", type: 'debit' },
                 { id: 2, title: "Conducting Test Driven Development to ensure the successful deployment of features in a legacy system", amount: "+£2,500.00", icon: "🧪", type: 'credit' },
                 { id: 3, title: "Coaching and mentoring more junior members of the team", amount: "-£15.99", icon: "⚽️", type: 'debit' },
-                { id: 4, title: "Deploy user - Developing an understanding of the technical infrastructure from a dev ops perpsective and leveraging this knowledge to optimise deployments", amount: "-£9.99", icon: "💿", type: 'debit' },
+                { id: 4, title: "Release team - Developing an understanding of the technical infrastructure from a dev ops perpsective and leveraging this knowledge to optimise deployments", amount: "-£9.99", icon: "💿", type: 'debit' },
                 { id: 5, title: "Communication with stakeholders and product owners of the software to discuss and prioritise current work and help garden backlogs", amount: "-£9.99", icon: "🪴", type: 'debit' },
                 { id: 6, title: "Taking on a leadership role, facilitating open and transparent team wide discussions", amount: "-£9.99", icon: "🗣️", type: 'debit' },
-            ] },
-        { id: 3, name: "March '24 - Current", balance: "WVS",description: "Full stack developer (Javascript, NextJS, ExpressJS, Azure, AWS)", variant: 'primary',
+            ],
+            moreInformation: "When I returned to Mayden, I was able to take on a leadership role in the team which then developed to outside of the team as well.\n\nMy role also moved away from working on individual tickets to assist more with project level planning and ensuring that projects were delivered, whilst also getting involved with the codebase."
+        },
+        { id: 3, name: "March '24 - Current", balance: "WVS", description: "Mid level engineer diving into existing projects and leading on new projects for the charity (Typescript, NodeJS, Azure, AWS)", variant: 'primary',
             transactions: [
                 { id: 1, title: "Working as a mid level developer and most senior member of the team", amount: "-£32.50", icon: "🧑‍💻", type: 'debit' },
                 { id: 2, title: "Developing project management skills by leading on new projects", amount: "+£2,500.00", icon: "✏️", type: 'credit' },
                 { id: 3, title: "Creating secure, scalable, robust code which has been vital to ensure the charity can continue to get volunteers, donations and record data in the field", amount: "-£15.99", icon: "🐕", type: 'debit' },
                 { id: 4, title: "As one of the first developers to join the technical team, I have been able to help shape a young team", amount: "-£9.99", icon: "👔", type: 'debit' },
                 { id: 5, title: "Building product expertise and knowledge to support growth", amount: "-£9.99", icon: "🧠", type: 'debit' },
-            ] },
+            ],
+            moreInformation: "In my current role, I have spent the last 3 months creating an authentication server for a single point of authentication for all of our volunteers. I have led this project and it's taught me a lot in ways to plan work, break up work and coach and mentor others so they can contribute to the project.\n\nOutside of this, I have been contributing to planning a new project coming up, as well as diving into finishing off an old project that was started before I joined"
+        },
     ];
 
     const handleCardClick = (id) => {
         if (activeCard === id) {
             setShowTransactions(false);
-            setTimeout(() => setActiveCard(null), 300); // Wait for transition before hiding card
+            setTimeout(() => setActiveCard(null), 300);
         } else {
             setActiveCard(id);
-            setTimeout(() => setShowTransactions(true), 100); // Slight delay before showing transactions
+            setTimeout(() => setShowTransactions(true), 100);
         }
     };
+
+    const allTransactions = cards.reduce((acc, card) => {
+        return [...acc, ...(card.transactions.map(t => ({
+            ...t,
+            cardName: card.name
+        })))];
+    }, []);
 
     return (
         <CardContainer>
             {cards.map((card) => (
-                <CardPage 
+                <CardPage
                     key={card.id}
                     isActive={activeCard === card.id}
                     onClick={() => handleCardClick(card.id)}
@@ -251,14 +326,19 @@ export const CardStack = () => {
                     <Logo>{card.name}</Logo>
                     <Balance>{card.balance}</Balance>
                     <Description>{card.description}</Description>
+                    
                     {activeCard === card.id && (
                         <>
-                            <ActionButton variant={card.variant}>Pay</ActionButton>
-                            <ActionButton variant={card.variant}>Send</ActionButton>
-                            <MenuButton variant={card.variant}>⋮</MenuButton>
+                            <ActionButton variant={card.variant} onClick={(e) => {
+                                e.stopPropagation();
+                                setPopupCardId(card.id);
+                            }}>
+                                More Information
+                            </ActionButton>
+                            
                             {card.transactions && (
                                 <TransactionsList isVisible={showTransactions}>
-                                    <TransactionsTitle>Experience & Achievements</TransactionsTitle>
+                                    <TransactionsTitle>Experience Details</TransactionsTitle>
                                     {card.transactions.map(transaction => (
                                         <TransactionItem key={transaction.id}>
                                             <IconContainer>
@@ -275,6 +355,43 @@ export const CardStack = () => {
                     )}
                 </CardPage>
             ))}
+
+            <FixedTransactionsList 
+                isExpanded={isTransactionsExpanded}
+                onClick={() => setIsTransactionsExpanded(!isTransactionsExpanded)}
+            >
+                <TransactionsHeader>
+                    <TransactionsTitle>Other Interests</TransactionsTitle>
+                    <span style={{ fontSize: '1.2rem' }}>
+                        {isTransactionsExpanded ? '↓' : '↑'}
+                    </span>
+                </TransactionsHeader>
+                {allTransactions.map(transaction => (
+                    <TransactionItem 
+                        key={`${transaction.cardName}-${transaction.id}`}
+
+                    >
+                        <IconContainer>
+                            {transaction.icon}
+                        </IconContainer>
+                        <TransactionDetails>
+                            <div style={{ fontSize: '0.8rem', color: '#666', marginBottom: '4px' }}>
+                                {transaction.cardName}
+                            </div>
+                            {transaction.title}
+                        </TransactionDetails>
+                    </TransactionItem>
+                ))}
+            </FixedTransactionsList>
+
+            <Overlay isVisible={popupCardId !== null} onClick={() => setPopupCardId(null)} />
+            {popupCardId && (
+                <Popup isVisible={true}>
+                    <CloseButton onClick={() => setPopupCardId(null)}>×</CloseButton>
+                    <h2>More Information</h2>
+                    <p>{cards.find(card => card.id === popupCardId)?.moreInformation}</p>
+                </Popup>
+            )}
         </CardContainer>
     );
 };
