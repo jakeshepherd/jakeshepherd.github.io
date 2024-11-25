@@ -366,22 +366,22 @@ export const CardStack = () => {
                         {isTransactionsExpanded ? '↓' : '↑'}
                     </span>
                 </TransactionsHeader>
-                {allTransactions.map(transaction => (
-                    <TransactionItem 
-                        key={`${transaction.cardName}-${transaction.id}`}
-
-                    >
+                <TransactionItem >
                         <IconContainer>
-                            {transaction.icon}
+                            ⚽️
                         </IconContainer>
                         <TransactionDetails>
-                            <div style={{ fontSize: '0.8rem', color: '#666', marginBottom: '4px' }}>
-                                {transaction.cardName}
-                            </div>
-                            {transaction.title}
+                            I play football for a local team
                         </TransactionDetails>
                     </TransactionItem>
-                ))}
+                <TransactionItem >
+                        <IconContainer>
+                            ⚽️
+                        </IconContainer>
+                        <TransactionDetails>
+                            I play football for a local team
+                        </TransactionDetails>
+                    </TransactionItem>
             </FixedTransactionsList>
 
             <Overlay isVisible={popupCardId !== null} onClick={() => setPopupCardId(null)} />
