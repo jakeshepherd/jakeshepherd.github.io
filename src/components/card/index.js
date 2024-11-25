@@ -274,33 +274,31 @@ export const CardStack = () => {
                 {
                     id: 1,
                     title: "Adaptability to work across multiple teams to gain a variety of experiences",
-                    amount: "-£32.50",
                     icon: "🏋️",
-                    type: 'debit'
                 },
-                { id: 2, title: "First experience of working as a professional in technology", amount: "+£2,500.00", icon: "🧑‍💻", type: 'credit' },
-                { id: 3, title: "Working in an agile team where I was encouraged to share my thoughts", amount: "-£15.99", icon: "🧠", type: 'debit' },
+                { id: 2, title: "First experience of working as a professional in technology", icon: "🧑‍💻" },
+                { id: 3, title: "Working in an agile team where I was encouraged to share my thoughts", icon: "🧠" },
             ],
-            moreInformation: "My placement year was a great opportunity for me to gain experience working on small tickets that were part of larger projects."
+            moreInformation: "My placement year was a great opportunity for me to gain experience working on small tickets that were part of larger projects.\n\nAs a newcomer to development, I realised how important it is to be able to pick up new skills and technologies quickly, a skill I have continued evolve throughout my career."
         },
-        { id: 2, name: "July '21 - March '24", balance: "Mayden", description: "Coming back as a full stack developer and progressing to be one of the most senior members of the team (PHP, Javascript, MySQL)", variant: 'secondary',
+        { id: 2, name: "July '21 - March '24", balance: "Mayden", description: "Coming back as a full stack developer to support and create new features in an application that supported over <b>8 million patients</b> and progressing to be one of the most senior members of the team (PHP, Javascript, MySQL)", variant: 'secondary',
             transactions: [
-                { id: 1, title: "Involved in strategic decision making about international product progression & wider market adaptation", amount: "-£32.50", icon: "📕", type: 'debit' },
-                { id: 2, title: "Conducting Test Driven Development to ensure the successful deployment of features in a legacy system", amount: "+£2,500.00", icon: "🧪", type: 'credit' },
-                { id: 3, title: "Coaching and mentoring more junior members of the team", amount: "-£15.99", icon: "⚽️", type: 'debit' },
-                { id: 4, title: "Release team - Developing an understanding of the technical infrastructure from a dev ops perpsective and leveraging this knowledge to optimise deployments", amount: "-£9.99", icon: "💿", type: 'debit' },
-                { id: 5, title: "Communication with stakeholders and product owners of the software to discuss and prioritise current work and help garden backlogs", amount: "-£9.99", icon: "🪴", type: 'debit' },
-                { id: 6, title: "Taking on a leadership role, facilitating open and transparent team wide discussions", amount: "-£9.99", icon: "🗣️", type: 'debit' },
+                { id: 6, title: "Taking on a leadership role, facilitating open and transparent team wide discussions as well as contributing with my own opinions to create a safe and secure application.", icon: "🗣️" },
+                { id: 5, title: "Cross team communication with stakeholders, product owners & UX teams of the software to discuss and prioritise current work and help garden backlogs", icon: "🪴" },
+                { id: 3, title: "Coaching and mentoring more junior members of the team to create an encouraging team environment", icon: "⚽️" },
+                { id: 2, title: "Conducting Test Driven Development to ensure the successful deployment of features in a legacy system", icon: "🧪" },
+                { id: 1, title: "Involved in strategic decision making about international product progression & wider market adaptation", icon: "📕" },
+                { id: 4, title: "Release team - Developing an understanding of the technical infrastructure from a dev ops perpsective and leveraging this knowledge to optimise deployments", icon: "💿" },
             ],
             moreInformation: "When I returned to Mayden, I was able to take on a leadership role in the team which then developed to outside of the team as well.\n\nMy role also moved away from working on individual tickets to assist more with project level planning and ensuring that projects were delivered, whilst also getting involved with the codebase."
         },
         { id: 3, name: "March '24 - Current", balance: "WVS", description: "Mid level engineer diving into existing projects and leading on new projects for the charity (Typescript, NodeJS, Azure, AWS)", variant: 'primary',
             transactions: [
-                { id: 1, title: "Working as a mid level developer and most senior member of the team", amount: "-£32.50", icon: "🧑‍💻", type: 'debit' },
-                { id: 2, title: "Developing project management skills by leading on new projects", amount: "+£2,500.00", icon: "✏️", type: 'credit' },
-                { id: 3, title: "Creating secure, scalable, robust code which has been vital to ensure the charity can continue to get volunteers, donations and record data in the field", amount: "-£15.99", icon: "🐕", type: 'debit' },
-                { id: 4, title: "As one of the first developers to join the technical team, I have been able to help shape and coach a young team", amount: "-£9.99", icon: "👔", type: 'debit' },
-                { id: 5, title: "Building product expertise and knowledge to support growth", amount: "-£9.99", icon: "🧠", type: 'debit' },
+                { id: 2, title: "Developing project management skills by leading on new projects such as an authentication server", icon: "✏️" },
+                { id: 3, title: "Creating secure, scalable, robust code which has been vital to ensure the charity can continue to get volunteers, donations and record data in the field", icon: "🐕" },
+                { id: 1, title: "Working as a mid level developer and most senior member of the team", icon: "🧑‍💻" },
+                { id: 4, title: "As one of the first developers to join the technical team, I have been able to help shape and coach a young team", icon: "👔" },
+                { id: 5, title: "Building product expertise and knowledge to support growth in the team and aid in communication across the charity", icon: "🧠" },
             ],
             moreInformation: "In my current role, I have spent the last 3 months creating an authentication server for a single point of authentication for all of our volunteers. I have led this project and it's taught me a lot in ways to plan work, break up work and coach and mentor others so they can contribute to the project.\n\nOutside of this, I have been contributing to planning a new project coming up, as well as diving into finishing off an old project that was started before I joined"
         },
@@ -335,7 +333,7 @@ export const CardStack = () => {
                 >
                     <Logo>{card.name}</Logo>
                     <Balance>{card.balance}</Balance>
-                    <Description>{card.description}</Description>
+                    <Description dangerouslySetInnerHTML={{ __html: card.description }} />
                     
                     {activeCard === card.id && (
                         <>

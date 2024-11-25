@@ -103,7 +103,7 @@ function App() {
           <WelcomeText>Welcome! 👋</WelcomeText>
           <WelcomeMessage>
             Thank you for visiting my website. I've created this Monzo-inspired 
-            interface to make reading CVs slightly more interesting and show what I can do.
+            interface to make reading CVs slightly more interesting for you and show what I can do.
           </WelcomeMessage>
           <ContinueButton onClick={handleContinue}>
             Let's Begin
