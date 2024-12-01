@@ -91,7 +91,7 @@ const TransactionsList = styled.div`
     right: 0;
     top: 180px;
     min-height: 200px;
-    margin-top: 60px;
+    margin-top: 10px;
     ${sharedTransactionListStyles}
 `;
 
@@ -282,12 +282,19 @@ export const CareerJourney = () => {
         },
         { id: 2, name: "July '21 - March '24", balance: "Mayden", description: "Returning full stack developer creating features for an application supporting <b>8M+ patients</b>, progressing to senior team member (PHP, Javascript, MySQL)", variant: 'secondary',
             transactions: [
-                { id: 6, title: "Taking on a leadership role, facilitating open and transparent team wide discussions as well as contributing with my own opinions to create a safe and secure application.", icon: "🗣️" },
-                { id: 5, title: "Cross team communication with stakeholders, product owners & UX teams of the software to discuss and prioritise current work and help garden backlogs", icon: "🪴" },
-                { id: 3, title: "Coaching and mentoring more junior members of the team to create an encouraging team environment", icon: "⚽️" },
-                { id: 2, title: "Conducting Test Driven Development to ensure the successful deployment of features in a legacy system", icon: "🧪" },
-                { id: 1, title: "Involved in strategic decision making about international product progression & wider market adaptation", icon: "📕" },
-                { id: 4, title: "Release team - Developing an understanding of the technical infrastructure from a dev ops perpsective and leveraging this knowledge to optimise deployments", icon: "💿" },
+                {
+                    id: 1,
+                    title: "Developing fully tested backend REST API endpoints and consuming those endpoints on the frontend.",
+                    icon: "🔌"
+                },
+                { id: 2, title: "Taking on a leadership role, facilitating open and transparent team wide discussions as well as contributing with my own opinions to create a safe and secure application.", icon: "🗣️" },
+                { id: 3, title: "Cross team communication with stakeholders, product owners & UX teams at each stage of the product lifecycle to discuss and prioritise current work and help garden backlogs.", icon: "🤝" },
+                { id: 4, title: "Providing insight and facilitation to technical discussions with the development team and product managers, ensuring the right work was completed according to priority and maximised product value.", icon: "💡" },
+                { id: 5, title: "Coaching and mentoring more junior members of the team to create an encouraging and supportive team environment.", icon: "👩‍🏫" },
+                { id: 6, title: "Involved in strategic decision making about international product progression & wider market adaptation.", icon: "🌍" },
+                { id: 7, title: "Release team - Developing an understanding of the technical infrastructure from a dev ops perspective and leveraging this knowledge to optimise deployments.", icon: "⚙️" },
+                { id: 8, title: "Conducting Test Driven Development to ensure the successful deployment of features in a legacy system with lots of technical debt.", icon: "🧪" },
+                { id: 9, title: "Estimating how long pieces of work would take, accounting for potential unknowns and providing realistic expectations to the team.", icon: "🕒" }
             ],
             moreInformation: "When I returned to Mayden, I was able to take on a leadership role in the team which then developed to outside of the team as well.\n\nMy role also moved away from working on individual tickets to assist more with project level planning and ensuring that projects were delivered, whilst also getting involved with the codebase."
         },
