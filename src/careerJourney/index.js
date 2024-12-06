@@ -342,10 +342,14 @@ export const CareerJourney = () => {
                         <Logo>{card.name}</Logo>
                         <Balance>{card.balance}</Balance>
                         <Description dangerouslySetInnerHTML={{ __html: card.description }} />
+                        <Spacer />
                         {activeCard !== card.id && (
+                            <div>
+                                <Spacer />
                             <ActionButton variant={card.variant}>
                                 More Information
                             </ActionButton>
+                            </div>
                         )}
                         
                         {activeCard === card.id && (
