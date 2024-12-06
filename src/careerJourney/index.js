@@ -45,6 +45,7 @@ const CardPage = styled.div`
         z-index: ${isActive ? '10' : 'auto'};
         box-shadow: ${isActive ? '0 4px 20px rgba(0,0,0,0.2)' : 'none'};
         filter: ${!isActive ? 'brightness(0.9)' : 'none'};
+        padding-bottom: ${isActive ? '40px' : '20px'};
     `}
 
     &:hover {
@@ -89,9 +90,9 @@ const TransactionsList = styled.div`
     position: absolute;
     left: 0;
     right: 0;
-    top: 180px;
+    top: 160px;
     min-height: 200px;
-    margin-top: 10px;
+    margin-top: 5px;
     ${sharedTransactionListStyles}
 `;
 
@@ -346,9 +347,9 @@ export const CareerJourney = () => {
                         {activeCard !== card.id && (
                             <div>
                                 <Spacer />
-                            <ActionButton variant={card.variant}>
-                                More Information
-                            </ActionButton>
+                                <ActionButton variant={card.variant}>
+                                    More Information
+                                </ActionButton>
                             </div>
                         )}
                         
